@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aakash Das | AI apps, finance calculators and browser games</title>
+  <meta name="description" content="Aakash Das builds AI apps, finance calculators and creator tools. 3 live projects, 20 in-page tools and 8 browser games, all running on this page." />
+  <meta name="theme-color" content="#12102b" />
+  <link rel="canonical" href="https://aakashpro50.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aakash Das | AI apps, finance calculators and browser games" />
+  <meta property="og:description" content="3 live projects, 20 in-page tools and 8 browser games, all running on one page." />
+  <meta property="og:url" content="https://aakashpro50.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%237c5cff'/%3E%3Ctext x='32' y='46' font-family='Impact,sans-serif' font-size='40' text-anchor='middle' fill='%23ffffff'%3EAD%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Aakash Das","url":"https://aakashpro50.github.io/","sameAs":["https://in.linkedin.com/in/akashdas50","https://github.com/Aakashpro50","https://www.instagram.com/aakashdas_007/","https://www.facebook.com/aakashdas007"]}
+  </script>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('reveal-all')},3500);</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>tailwind.config = {"corePlugins": {"preflight": false}, "theme": {"extend": {"fontFamily": {"display": ["'Bebas Neue'", "Impact", "sans-serif"], "sans": ["'EB Garamond'", "Georgia", "serif"]}, "fontSize": {"xs": ["0.875rem", {"lineHeight": "1.4"}], "sm": ["1rem", {"lineHeight": "1.5"}], "base": ["1.0625rem", {"lineHeight": "1.5"}]}, "colors": {"blue": {"200": "#c9d8ff", "300": "#a9c1ff", "400": "#86a5f7", "500": "#4a74e8", "600": "#2456d6", "700": "#1b3fa0"}}}}};</script>
+  <style>
+    :root {
+      --bg:#dfdedb; --surface:#d3d2ce; --ink:#26251e; --muted:#55534b;
+      --accent:#2456d6; --accent-deep:#1b3fa0; --accent-ink:#ffffff; --accent-tint:#a9c1ff;
+      --panel:#1d1c17; --panel-ink:#ecebe6;
+      --m:clamp(16px,3.2vw,44px);
+      --gap-section:clamp(88px,12vw,184px);
+      --step-small:clamp(0.875rem,0.85rem + 0.1vw,0.9375rem);
+      --step-body:clamp(1.0625rem,1rem + 0.25vw,1.1875rem);
+      --step-lead:clamp(1.25rem,1.1rem + 0.7vw,1.625rem);
+      --step-head:clamp(2.75rem,1.2rem + 5vw,5.5rem);
+      --ease:cubic-bezier(.2,.7,.2,1);
+    }
+    /* Reset (Tailwind preflight is switched off so these custom classes stay predictable) */
+    *,*::before,*::after { box-sizing:border-box; border-width:0; border-style:solid; border-color:currentColor; }
+    html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; scroll-padding-top:72px; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:'EB Garamond',Georgia,'Times New Roman',serif; font-size:var(--step-body); line-height:1.5; font-variant-numeric:lining-nums tabular-nums; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4,h5,p,figure,blockquote,dl,dd,ul,ol { margin:0; padding:0; }
+    ul,ol { list-style:none; }
+    button,input,select,textarea { font:inherit; color:inherit; margin:0; letter-spacing:inherit; }
+    button { background:none; cursor:pointer; padding:0; text-align:inherit; }
+    a { color:inherit; text-decoration-thickness:1px; text-underline-offset:.22em; }
+    img,svg { display:block; max-width:100%; }
+    textarea { resize:vertical; }
+    ::selection { background:var(--accent); color:#fff; }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+    .on-dark :focus-visible, dialog :focus-visible { outline-color:var(--accent-tint); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .skip { position:absolute; left:var(--m); top:-80px; z-index:100; background:var(--ink); color:var(--bg); padding:12px 18px; }
+    .skip:focus { top:12px; }
+
+    .display { font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:-.02em; line-height:.9; }
+    .h2 { font-size:var(--step-head); max-width:14ch; }
+    .lead { font-size:var(--step-lead); line-height:1.4; max-width:34ch; color:var(--ink); }
+    .small { font-size:var(--step-small); }
+    .soft { color:var(--muted); }
+    .wrap { padding-left:var(--m); padding-right:var(--m); }
+    .section { padding-top:var(--gap-section); }
+
+    /* Buttons: flat, square, one fill */
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 28px; background:var(--accent); color:var(--accent-ink); font-size:var(--step-body); font-weight:500; text-decoration:none; transition:transform .18s var(--ease), background-color .18s; }
+    .btn:hover { background:var(--accent-deep); }
+    .btn:active { transform:translateY(2px); }
+    .btn-ink { background:var(--ink); }
+    .btn-ink:hover { background:#000; }
+    .link { display:inline-flex; align-items:center; min-height:44px; text-decoration:underline; text-underline-offset:.22em; font-size:1.0625rem; transition:color .15s; }
+    .link:hover { color:var(--accent); }
+    .on-dark .link:hover { color:var(--accent-tint); }
+
+    /* Top bar */
+    .bar { position:sticky; top:0; z-index:30; display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; padding:0 var(--m); background:var(--bg); }
+    .mono-mark { font-size:2rem; line-height:1; text-decoration:none; min-height:44px; display:inline-flex; align-items:center; }
+    .bar nav { display:flex; align-items:center; gap:clamp(8px,2.2vw,30px); font-size:var(--step-small); }
+    .bar nav a { display:inline-flex; align-items:center; min-height:44px; padding:0 4px; text-decoration:none; transition:color .15s; }
+    .bar nav a:hover { color:var(--accent); }
+    .bar-resume { min-height:44px; padding:0 18px; font-size:1rem; }
+    @media (max-width:640px){ .bar nav .opt { display:none; } }
+
+    /* Hero */
+    .hero { position:relative; min-height:min(860px, calc(100svh - 64px)); padding:clamp(8px,3vh,32px) var(--m) clamp(28px,5vh,52px); display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:1fr auto; column-gap:16px; }
+    .name { grid-column:1 / -1; grid-row:1; align-self:start; font-size:clamp(7rem,min(30vw,46svh),28rem); line-height:.82; letter-spacing:-.012em; padding-top:.14em; }
+    .name .ln { display:block; }
+    .name .ln-in { display:block; }
+    .name .a { color:var(--accent); }
+    .name .b { color:var(--ink); }
+    .hero-copy { grid-column:8 / -1; grid-row:1; justify-self:end; align-self:end; width:100%; max-width:36ch; display:flex; flex-direction:column; gap:20px; align-items:flex-start; }
+    .hero-copy p { font-size:var(--step-lead); line-height:1.35; }
+    .hero-index { grid-column:1 / -1; grid-row:2; align-self:end; display:flex; flex-wrap:wrap; gap:10px clamp(20px,4vw,56px); border-top:2px solid var(--ink); padding-top:16px; }
+    .hero-index a { display:flex; align-items:baseline; gap:10px; text-decoration:none; min-height:44px; }
+    .hero-index .n { font-family:var(--font-display, 'Bebas Neue', Impact, sans-serif); font-size:1.4rem; color:var(--accent); }
+    .hero-index .t { font-size:1rem; }
+    .marquee { overflow:hidden; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); padding:12px 0; margin-top:clamp(28px,5vh,52px); }
+    .marquee-in { display:flex; white-space:nowrap; animation:mq 26s linear infinite; font-size:1.35rem; letter-spacing:.06em; }
+    .marquee-in span { padding-right:.6em; }
+    @keyframes mq { to { transform:translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .marquee-in { animation:none; } }
+    #vault-unlocked[hidden] { display:none !important; }
+    .tiles { counter-reset:tile; }
+    .tile::before { counter-increment:tile; content:counter(tile, decimal-leading-zero); position:absolute; top:10px; left:12px; font-size:.85rem; opacity:.72; }
+    @media (max-width:820px){ .hero-index { grid-row:3; } }
+    .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px 24px; }
+    @media (max-width:820px){
+      .hero { grid-template-rows:auto auto auto; gap:28px; min-height:0; }
+      .name { font-size:clamp(5rem,min(36vw,40svh),16rem); }
+      .hero-copy { grid-column:1 / -1; grid-row:2; justify-self:start; max-width:none; }
+    }
+
+    /* Live figure */
+    .band { background:var(--surface); padding:var(--gap-section) var(--m); margin-top:var(--gap-section); }
+    .emi { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:48px 16px; align-items:end; }
+    .emi-in { grid-column:1 / 6; display:grid; gap:20px; }
+    .emi-out { grid-column:7 / -1; }
+    .field label { display:block; font-size:var(--step-small); color:var(--muted); margin-bottom:2px; }
+    .field input { width:100%; min-height:52px; background:transparent; border-bottom:2px solid var(--ink); font-size:var(--step-lead); padding:4px 0; border-radius:0; }
+    .field input:focus-visible { outline-offset:2px; }
+    .fig { font-size:clamp(4.5rem,13vw,13rem); line-height:.8; color:var(--accent); overflow-wrap:anywhere; }
+    .fig-note { margin-top:20px; font-size:var(--step-lead); max-width:30ch; }
+    @media (max-width:820px){ .emi-in,.emi-out { grid-column:1 / -1; } }
+
+    /* Work ledger */
+    .work-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:40px 16px; margin-top:56px; align-items:start; }
+    .ledger { grid-column:1 / 8; }
+    .lrow { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) auto; gap:4px 20px; align-items:center; min-height:72px; padding:10px 0; transition:opacity .15s; }
+    .ledger:hover .lrow, .ledger:focus-within .lrow { opacity:.45; }
+    .ledger .lrow:hover, .ledger .lrow:focus-within { opacity:1; }
+    .lrow h3 { font-size:var(--step-lead); line-height:1.15; font-weight:500; }
+    .lrow h3 button { text-align:left; min-height:44px; display:inline-flex; align-items:center; }
+    .lrow .kind { color:var(--muted); font-size:var(--step-body); }
+    .outs { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-top:48px; }
+    @media (max-width:980px){ .outs { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:560px){ .outs { grid-template-columns:1fr; } }
+    .lrow .acts { display:flex; gap:20px; align-items:center; justify-content:flex-end; }
+    .preview { grid-column:9 / -1; position:sticky; top:88px; }
+    @media (max-width:980px){ .ledger,.preview { grid-column:1 / -1; } .preview { position:static; } .lrow { grid-template-columns:1fr auto; } .lrow .kind { grid-column:1 / -1; order:3; } }
+
+    /* Real interface fragments and dialogs: they keep their own lines and panel tones */
+    .frag { background:var(--panel); color:var(--panel-ink); padding:24px; min-height:280px; }
+    .frag h4 { font-size:var(--step-small); color:var(--accent-tint); font-weight:500; margin-bottom:12px; }
+    .frag dl { display:grid; grid-template-columns:1fr auto; gap:10px 16px; }
+    .frag dt { color:#b9b8b1; }
+    .frag dd { font-size:1.375rem; text-align:right; }
+    .frag blockquote { font-size:1.1875rem; line-height:1.45; }
+    .frag .cap { margin-top:18px; font-size:var(--step-small); color:#b9b8b1; }
+
+    /* Tools list */
+    .tools-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:24px; }
+    .tools-controls { margin-top:40px; display:flex; flex-wrap:wrap; gap:12px 8px; align-items:center; }
+    .search { flex:1 1 280px; max-width:420px; min-height:48px; background:transparent; border-bottom:2px solid var(--ink); font-size:var(--step-body); padding:4px 0; border-radius:0; }
+    .cats { display:flex; flex-wrap:wrap; gap:8px; }
+    .chip { min-height:44px; padding:0 18px; background:var(--surface); font-size:1rem; transition:background-color .15s, color .15s; }
+    .chip:hover { background:#c6c5c0; }
+    .chip[aria-pressed="true"] { background:var(--ink); color:var(--bg); }
+    .tgroup { position:sticky; top:64px; z-index:5; background:var(--bg); color:var(--accent); font-size:var(--step-lead); font-weight:600; padding:56px 0 12px; }
+    .trow { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) 190px; gap:6px 32px; align-items:center; padding:14px 0; min-height:76px; transition:background-color .15s; }
+    .trow:hover { background:var(--surface); }
+    .trow h4 { font-size:var(--step-lead); line-height:1.15; font-weight:500; }
+    .trow p { color:var(--ink); font-size:1.0625rem; line-height:1.4; max-width:56ch; }
+    .trow .acts { display:flex; gap:12px; align-items:center; justify-content:flex-end; }
+    .trow .btn { min-height:48px; padding:0 22px; font-size:1.0625rem; }
+    @media (max-width:760px){ .lrow h3 { font-size:1.25rem; } .trow h4 { font-size:1.25rem; } .trow { grid-template-columns:1fr; gap:6px; padding:18px 0; } .trow .acts { justify-content:flex-start; margin-top:6px; } }
+    .empty { padding:48px 0; font-size:var(--step-lead); color:var(--muted); }
+
+    /* Game tiles */
+    .tiles { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; padding:0 8px; margin-top:56px; }
+    .tile { position:relative; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; text-align:center; transition:transform .22s var(--ease); }
+    .tile:hover { transform:translateY(-4px); }
+    .tile:active { transform:translateY(0); }
+    .tile .word { font-size:clamp(3rem,7.4vw,8.5rem); line-height:.85; margin-bottom:.3em; }
+    .tile .cap { position:absolute; left:12px; right:12px; bottom:16px; font-size:.9375rem; text-align:center; }
+    .t1 { background:var(--surface); color:var(--ink); } .t2 { background:var(--accent); color:#fff; }
+    .t3 { background:var(--ink); color:var(--bg); } .t4 { background:var(--muted); color:var(--bg); }
+    @media (max-width:640px){ .tiles { grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px; padding:0 6px; } .tile .word { font-size:22vw; } .tile .cap { font-size:.875rem; } }
+    .games-note { margin-top:28px; }
+
+    /* Contact and footer */
+    .contact { background:var(--ink); color:var(--bg); min-height:92svh; margin-top:var(--gap-section); padding:clamp(28px,5vh,56px) var(--m); display:grid; grid-template-rows:auto 1fr auto; gap:24px; }
+    .contact .ask { font-size:var(--step-lead); max-width:26ch; line-height:1.3; }
+    .contact .big { align-self:end; font-size:clamp(3.4rem,9.1vw,11rem); line-height:.85; text-decoration:none; display:block; transition:color .18s; overflow-wrap:anywhere; }
+    .contact .big:hover { color:var(--accent-tint); }
+    .contact .big .br { display:none; }
+    @media (max-width:760px){ .contact .big { font-size:clamp(3rem,15vw,6rem); } .contact .big .br { display:inline; } }
+    .contact-foot { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 32px; align-items:center; font-size:1.0625rem; }
+    .contact-foot nav { display:flex; flex-wrap:wrap; gap:4px 28px; }
+    .contact .btn { background:var(--bg); color:var(--ink); }
+    .contact .btn:hover { background:var(--accent-tint); }
+    footer.foot { background:var(--accent); color:var(--bg); padding:clamp(36px,6vw,72px) var(--m) 0; overflow:hidden; }
+    .foot .word { font-size:clamp(5rem,23.5vw,30rem); line-height:.8; margin-bottom:-.14em; white-space:nowrap; }
+    .foot-row { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; font-size:1rem; padding-bottom:20px; margin-bottom:.14em; position:relative; z-index:1; }
+    .foot-row a { min-height:44px; display:inline-flex; align-items:center; }
+
+    /* Dialogs (the tools and games keep the dark panel they were built for) */
+    dialog.dlg { border:0; padding:0; margin:auto; width:min(1040px,calc(100% - 16px)); max-height:min(92svh,920px); background:var(--panel); color:var(--panel-ink); box-shadow:0 24px 60px rgba(0,0,0,.45); /* taste-skill-ignore */ overflow:hidden; }
+    dialog.dlg[open] { display:flex; flex-direction:column; animation:dlg-in .22s var(--ease); }
+    dialog.dlg::backdrop { background:rgba(24,23,18,.86); }
+    .dlg-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:20px 24px 16px; }
+    .dlg-kind { color:var(--accent-tint); font-size:var(--step-small); }
+    .dlg-title { font-size:clamp(2rem,1.4rem + 2vw,3rem); line-height:.95; margin-top:4px; }
+    .dlg-x { min-width:48px; min-height:48px; display:inline-flex; align-items:center; justify-content:center; font-size:2rem; line-height:1; background:rgba(255,255,255,.1); transition:background-color .15s; }
+    .dlg-x:hover { background:rgba(255,255,255,.2); }
+    .dlg-body { padding:8px 24px 24px; overflow-y:auto; flex:1; display:grid; grid-template-columns:minmax(0,1fr); gap:20px; }
+    @media (min-width:1024px){ .dlg-body { grid-template-columns:repeat(12,minmax(0,1fr)); } }
+    .dlg .ext { display:inline-flex; align-items:center; min-height:44px; padding:0 14px; background:rgba(255,255,255,.1); color:var(--accent-tint); text-decoration:none; font-size:1rem; white-space:nowrap; }
+    .dlg .ext[hidden] { display:none; }
+    .dlg .ext:hover { background:rgba(255,255,255,.2); }
+    .dlg label { color:#c9c8c0; }
+    .dlg input, .dlg select, .dlg textarea { min-height:48px; font-size:1.0625rem; border-radius:0; }
+    .dlg select, .dlg select option { background-color:#2a2923; color:#fff; }
+    .dlg input, .dlg textarea { background-color:rgba(0,0,0,.4); }
+    .dlg button { min-height:44px; }
+    .dlg-resume { width:min(520px,calc(100% - 16px)); }
+    .dlg-resume .stack { padding:8px 24px 28px; display:grid; gap:12px; overflow-y:auto; min-width:0; }
+    .dlg-resume .stack > * { min-width:0; }
+    .dlg-resume .btn { width:100%; }
+    .dlg-resume .btn-alt { background:rgba(255,255,255,.12); }
+    .dlg-resume .btn-alt:hover { background:rgba(255,255,255,.22); }
+    .simon-lit { filter:brightness(1.75); transform:scale(.97); }
+    @keyframes dlg-in { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+    html.lock { overflow:hidden; }
+
+    /* Motion: one headline reveal, staggered entrances, feedback on controls */
+    .js .name .ln-in { animation:rise-line .6s var(--ease) both; }
+    .js .name .ln:nth-child(2) .ln-in { animation-delay:.08s; }
+    .js .hero-copy { opacity:0; transform:translateY(18px); animation:rise-fade .5s var(--ease) .45s forwards; }
+    .js [data-rise] { opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); transition-delay:calc(var(--i,0) * 70ms); }
+    .js [data-rise].in { opacity:1; transform:none; }
+    html.reveal-all [data-rise] { opacity:1; transform:none; }
+    @keyframes rise-line { from { transform:translateY(12%); } to { transform:none; } }
+    @keyframes rise-fade { to { opacity:1; transform:none; } }
+    @media (prefers-reduced-motion:reduce){
+      html { scroll-behavior:auto; }
+      *,*::before,*::after { animation-duration:.001ms !important; animation-delay:0s !important; transition-duration:.001ms !important; transition-delay:0s !important; }
+      .js .hero-copy, .js [data-rise] { transform:none; opacity:1; }
+      .tile:hover { transform:none; }
+    }
+
+    /* ===== v3 theme: colourful, soft on the eyes. The games section keeps its original look (scoped below). ===== */
+    :root {
+      --bg:#14112e; --surface:#1f1b47; --ink:#f4f2ff; --muted:#bdb8e6;
+      --accent:#7c5cff; --accent-deep:#5a3de6; --accent-ink:#ffffff; --accent-tint:#cdbfff;
+      --panel:#211d4b; --panel-ink:#f1efff;
+      --pink:#ff5d9e; --amber:#ffb84d; --teal:#2fd6c0; --line:rgba(255,255,255,.1);
+      --grad:linear-gradient(120deg,#7c5cff 0%,#c44bd6 55%,#ff5d9e 100%);
+    }
+    /* original look, preserved for the games section and the game dialog */
+    #games, .dlg.is-game {
+      --bg:#dfdedb; --surface:#d3d2ce; --ink:#26251e; --muted:#55534b;
+      --accent:#2456d6; --accent-deep:#1b3fa0; --accent-ink:#ffffff; --accent-tint:#a9c1ff;
+      --panel:#1d1c17; --panel-ink:#ecebe6;
+      font-family:'EB Garamond',Georgia,'Times New Roman',serif;
+    }
+    #games { background:var(--bg); color:var(--ink); padding-bottom:var(--gap-section); }
+    #games ::selection { background:#2456d6; color:#fff; }
+    #games :focus-visible { outline-color:#2456d6; }
+    .dlg.is-game ::selection { background:#2456d6; color:#fff; }
+
+    body { background:var(--bg); font-family:'Outfit','Segoe UI',system-ui,sans-serif; font-size:clamp(1rem,.97rem + .2vw,1.125rem); line-height:1.55; }
+    body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:radial-gradient(60vw 50vh at 8% -5%,rgba(124,92,255,.32),transparent 70%),radial-gradient(50vw 45vh at 100% 8%,rgba(255,93,158,.2),transparent 70%),radial-gradient(60vw 50vh at 80% 100%,rgba(47,214,192,.12),transparent 70%); }
+    :focus-visible { outline-color:var(--accent-tint); }
+    ::selection { background:var(--pink); color:#fff; }
+
+    .bar { background:rgba(20,17,46,.78); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    .mono-mark { width:46px; height:46px; justify-content:center; border-radius:14px; background:var(--grad); color:#fff; font-size:1.7rem; box-shadow:0 6px 20px rgba(124,92,255,.45); }
+    .bar nav a { border-radius:999px; padding:0 12px; color:var(--muted); }
+    .bar nav a:hover { color:#fff; background:rgba(255,255,255,.08); }
+
+    .btn { border-radius:999px; background:var(--grad); color:#fff; font-weight:600; box-shadow:0 8px 24px rgba(196,75,214,.35); transition:transform .18s var(--ease), box-shadow .18s, filter .18s; }
+    .btn:hover { background:var(--grad); filter:brightness(1.1); transform:translateY(-2px); box-shadow:0 12px 30px rgba(196,75,214,.5); }
+    .btn:active { transform:translateY(1px); }
+    .btn-ink { background:var(--surface); box-shadow:none; }
+    .link { color:var(--accent-tint); border-radius:999px; }
+    .link:hover { color:#fff; }
+    .bar-resume { padding:0 20px; }
+
+    .hero { min-height:min(780px, calc(100svh - 64px)); }
+    .name { font-size:clamp(6.5rem,min(28vw,42svh),24rem); }
+    .name .a { background:linear-gradient(100deg,#a78bfa 0%,#ff5d9e 100%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+    .name .b { background:linear-gradient(100deg,#ffb84d 0%,#ff5d9e 70%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+    .hero-copy p { color:var(--ink); }
+    .hero-social { display:flex; gap:10px; }
+    .soc { width:46px; height:46px; display:inline-flex; align-items:center; justify-content:center; border-radius:14px; color:#fff; transition:transform .18s var(--ease), box-shadow .18s; }
+    .soc:hover { transform:translateY(-3px) scale(1.05); }
+    .soc-li { background:#0a66c2; } .soc-ig { background:linear-gradient(45deg,#f9a825,#ee2a7b 55%,#6228d7); } .soc-fb { background:#1877f2; } .soc-gh { background:#2b2f3a; border:1px solid var(--line); }
+    .hero-index { border-top:0; gap:10px; padding-top:8px; }
+    .hero-index a { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:0 18px; transition:background-color .15s, transform .15s var(--ease); }
+    .hero-index a:hover { background:#2a2560; transform:translateY(-2px); }
+    .hero-index a:nth-child(1) .n { color:var(--accent-tint); } .hero-index a:nth-child(2) .n { color:var(--teal); } .hero-index a:nth-child(3) .n { color:var(--amber); } .hero-index a:nth-child(4) .n { color:var(--pink); } .hero-index a:nth-child(5) .n { color:#8fd0ff; }
+    .marquee { border:0; background:var(--grad); color:#fff; padding:14px 0; transform:rotate(-1.2deg); width:106%; margin-left:-3%; margin-top:clamp(20px,4vh,40px); box-shadow:0 10px 40px rgba(124,92,255,.35); }
+    html, body { overflow-x:hidden; }
+
+    .band { background:linear-gradient(135deg,#2b2070 0%,#4b2175 55%,#702263 100%); margin:var(--gap-section) var(--m) 0; padding:clamp(32px,6vw,80px); border-radius:32px; border:1px solid var(--line); box-shadow:0 30px 80px rgba(0,0,0,.35); }
+    .field label { color:#d8d3ff; margin-bottom:6px; }
+    .field input { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); border-radius:14px; padding:4px 16px; min-height:54px; }
+    .field input:focus-visible { outline-offset:2px; }
+    .fig { background:linear-gradient(100deg,#ffb84d,#ff5d9e 70%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; }
+    .fig-note { color:#f1eeff; }
+
+    .lrow { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:12px 20px; margin-bottom:12px; transition:transform .18s var(--ease), border-color .18s, background-color .18s; }
+    .ledger:hover .lrow, .ledger:focus-within .lrow { opacity:1; }
+    .ledger .lrow:hover, .ledger .lrow:focus-within { border-color:var(--accent); background:#272259; transform:translateY(-2px); }
+    .lrow .kind { color:var(--muted); }
+    .frag { border-radius:20px; background:linear-gradient(160deg,#272259,#1b1742); border:1px solid var(--line); border-top:4px solid var(--accent); }
+    .outs .frag:nth-child(1) { border-top-color:var(--teal); } .outs .frag:nth-child(2) { border-top-color:var(--amber); } .outs .frag:nth-child(3) { border-top-color:var(--pink); } .outs .frag:nth-child(4) { border-top-color:var(--accent); }
+    .frag h4 { color:var(--accent-tint); } .frag dt, .frag .cap { color:#c9c4ee; }
+    .frag dd { color:#fff; }
+
+    .h2 { max-width:16ch; }
+    .tools-controls { gap:12px; }
+    .search { background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:4px 22px; }
+    .chip { background:var(--surface); border:1px solid var(--line); border-radius:999px; color:var(--ink); }
+    .chip:hover { background:#2a2560; }
+    .chip[aria-pressed="true"] { background:var(--grad); border-color:transparent; color:#fff; }
+    .tgroup { background:linear-gradient(var(--bg) 70%,rgba(20,17,46,0)); color:var(--accent-tint); font-weight:600; }
+    .trow { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:16px 24px; margin-bottom:12px; transition:transform .18s var(--ease), border-color .18s, background-color .18s; }
+    .trow:hover { background:#272259; border-color:var(--accent); transform:translateY(-2px); }
+    .trow p { color:#e2deff; }
+    .trow .btn { min-height:46px; padding:0 24px; }
+    .empty { color:var(--muted); }
+
+    .connect { margin-top:var(--gap-section); padding:clamp(48px,8vw,110px) var(--m); background:linear-gradient(160deg,#2a1f78 0%,#1b1545 55%,#3a1450 100%); position:relative; overflow:hidden; }
+    .connect::before { content:""; position:absolute; width:60vw; height:60vw; max-width:760px; max-height:760px; right:-15%; top:-30%; background:radial-gradient(circle,rgba(255,93,158,.35),transparent 65%); pointer-events:none; }
+    .connect-in { position:relative; max-width:1180px; margin:0 auto; }
+    .eyebrow { color:var(--amber); font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.9rem; }
+    .connect-h { font-size:clamp(3rem,1.2rem + 7vw,7rem); margin-top:10px; background:linear-gradient(100deg,#fff 20%,#cdbfff); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent; max-width:none; }
+    .connect .lead { margin-top:18px; color:#e6e2ff; max-width:46ch; }
+    .soc-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:44px; }
+    @media (max-width:980px){ .soc-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:520px){ .soc-grid { grid-template-columns:1fr; } }
+    .scard { position:relative; display:grid; grid-template-columns:auto 1fr auto; grid-template-areas:"ico name go" "ico handle go"; align-items:center; column-gap:16px; padding:22px; border-radius:24px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); text-decoration:none; color:#fff; transition:transform .2s var(--ease), box-shadow .2s, border-color .2s, background-color .2s; min-height:96px; }
+    .scard:hover { transform:translateY(-5px); background:rgba(255,255,255,.12); }
+    .sico { grid-area:ico; width:60px; height:60px; border-radius:18px; display:inline-flex; align-items:center; justify-content:center; color:#fff; }
+    .sname { grid-area:name; font-weight:600; font-size:1.25rem; align-self:end; line-height:1.2; }
+    .shandle { grid-area:handle; color:#d6d1f7; font-size:.98rem; align-self:start; overflow-wrap:anywhere; }
+    .sgo { grid-area:go; color:#fff; opacity:.6; transition:transform .2s var(--ease), opacity .2s; }
+    .scard:hover .sgo { opacity:1; transform:translate(3px,-3px); }
+    .c-li .sico { background:#0a66c2; } .c-li:hover { border-color:#4aa3ff; box-shadow:0 14px 40px rgba(10,102,194,.45); }
+    .c-ig .sico { background:linear-gradient(45deg,#f9a825,#ee2a7b 55%,#6228d7); } .c-ig:hover { border-color:#ff7ab8; box-shadow:0 14px 40px rgba(238,42,123,.4); }
+    .c-fb .sico { background:#1877f2; } .c-fb:hover { border-color:#6aa8ff; box-shadow:0 14px 40px rgba(24,119,242,.45); }
+    .c-gh .sico { background:#2b2f3a; border:1px solid rgba(255,255,255,.2); } .c-gh:hover { border-color:#c9c9d6; box-shadow:0 14px 40px rgba(255,255,255,.12); }
+    .connect-foot { margin-top:40px; }
+
+    footer.foot { background:linear-gradient(100deg,#5a3de6,#c44bd6 60%,#ff5d9e); color:#fff; }
+
+    dialog.dlg:not(.is-game) { border-radius:24px; border:1px solid var(--line); background:linear-gradient(170deg,#262156,#191540); }
+    dialog.dlg:not(.is-game)::backdrop { background:rgba(10,8,28,.82); }
+    .dlg:not(.is-game) input, .dlg:not(.is-game) select, .dlg:not(.is-game) textarea { border-radius:12px; border-color:rgba(255,255,255,.2); }
+    .dlg:not(.is-game) #m-inputs > button { border-radius:999px; background:var(--grad); box-shadow:0 8px 24px rgba(196,75,214,.35); font-weight:600; }
+    .dlg:not(.is-game) #m-inputs > button:hover { filter:brightness(1.1); }
+    .dlg:not(.is-game) .dlg-x { border-radius:14px; }
+    .dlg:not(.is-game) .ext { border-radius:999px; }
+    .dlg-resume .btn-alt { background:rgba(255,255,255,.12); box-shadow:none; }
+    .dlg-resume .btn-alt:hover { background:rgba(255,255,255,.22); }
+    @media (max-width:820px){ .marquee { transform:none; width:100%; margin-left:0; } .band { border-radius:24px; } }
+    @media (prefers-reduced-motion:reduce){ .marquee { transform:none; } }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 22v-8.2h2.8l.5-3.4h-3.3V8.2c0-1 .4-1.7 1.8-1.7h1.6V3.4c-.3 0-1.3-.2-2.5-.2-2.6 0-4.2 1.5-4.2 4.3v2.9H7.5v3.4h2.8V22z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.2 9.2h3.6V20H4.2zM6 3.6a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2zM10 9.2h3.4v1.5c.5-.9 1.7-1.8 3.5-1.8 3.7 0 4.3 2.4 4.3 5.5V20h-3.6v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V20H10z"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  </defs></svg>
+  <header class="bar">
+    <a class="skip" href="#work">Skip to projects</a>
+    <a class="mono-mark display" href="#top" aria-label="Aakash Das, back to top">AD</a>
+    <nav aria-label="Main">
+      <a href="#work">Projects</a>
+      <a class="opt" href="#tools">Tools</a>
+      <a class="opt" href="#games">Games</a>
+      <a href="#contact">Connect</a>
+      <button class="btn bar-resume" onclick="openResume()">Resume</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title" class="name display">
+        <span class="ln"><span class="ln-in a">Aakash</span></span>
+        <span class="ln"><span class="ln-in b">Das</span></span>
+      </h1>
+      <div class="hero-copy">
+        <p>AI apps, finance calculators aur creator tools. 3 live projects, 20 tools, 8 games, sab isi page par chalte hain.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#work">Live projects dekho</a>
+          <button class="link" onclick="openResume()">Resume download</button>
+        </div>
+        <div class="hero-social" aria-label="Social profiles">
+          <a class="soc soc-li" href="https://in.linkedin.com/in/akashdas50" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="22" height="22"><use href="#i-in"/></svg></a>
+          <a class="soc soc-ig" href="https://www.instagram.com/aakashdas_007/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="22" height="22"><use href="#i-ig"/></svg></a>
+          <a class="soc soc-fb" href="https://www.facebook.com/aakashdas007" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="22" height="22"><use href="#i-fb"/></svg></a>
+          <a class="soc soc-gh" href="https://github.com/Aakashpro50" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="22" height="22"><use href="#i-gh"/></svg></a>
+        </div>
+      </div>
+      <nav class="hero-index" aria-label="Page sections">
+        <a href="#work"><span class="n display">01</span><span class="t">Live projects</span></a>
+        <a href="#outputs"><span class="n display">02</span><span class="t">Sample outputs</span></a>
+        <a href="#tools"><span class="n display">03</span><span class="t">20 tools</span></a>
+        <a href="#games"><span class="n display">04</span><span class="t">8 games</span></a>
+        <a href="#contact"><span class="n display">05</span><span class="t">Connect</span></a>
+      </nav>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-in display"><span>AI APPS &nbsp;&middot;&nbsp; FINANCE CALCULATORS &nbsp;&middot;&nbsp; CREATOR TOOLS &nbsp;&middot;&nbsp; NUMEROLOGY &nbsp;&middot;&nbsp; BROWSER GAMES &nbsp;&middot;&nbsp; RESUME &nbsp;&middot;&nbsp; </span><span>AI APPS &nbsp;&middot;&nbsp; FINANCE CALCULATORS &nbsp;&middot;&nbsp; CREATOR TOOLS &nbsp;&middot;&nbsp; NUMEROLOGY &nbsp;&middot;&nbsp; BROWSER GAMES &nbsp;&middot;&nbsp; RESUME &nbsp;&middot;&nbsp; </span></div>
+    </div>
+
+    <section class="band" aria-labelledby="emi-title">
+      <div class="emi">
+        <div class="emi-in" data-rise>
+          <h2 id="emi-title" class="h2 display">EMI, abhi ke abhi</h2>
+          <div class="field" data-rise><label for="emi-p">Loan amount (₹)</label><input id="emi-p" type="number" inputmode="decimal" min="1" step="any" value="2500000" /></div>
+          <div class="field" data-rise style="--i:1"><label for="emi-r">Interest rate (% per year)</label><input id="emi-r" type="number" inputmode="decimal" min="0.1" max="40" step="any" value="8.5" /></div>
+          <div class="field" data-rise style="--i:2"><label for="emi-y">Tenure (years)</label><input id="emi-y" type="number" inputmode="numeric" min="1" max="40" step="1" value="20" /></div>
+          <p class="small soft">Standard reducing-balance EMI, monthly compounding.</p>
+        </div>
+        <div class="emi-out" data-rise style="--i:2">
+          <p class="fig display" id="emi-fig" aria-live="polite">₹0</p>
+          <p class="fig-note" id="emi-note"></p>
+          <button class="link" onclick="openApp('loan-hack')">Poora EMI aur SIP planner kholein</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section wrap" aria-labelledby="work-title">
+      <h2 id="work-title" class="h2 display" data-rise>3 live projects</h2>
+      <p class="lead" style="margin-top:20px;--i:1" data-rise>Ye teeno alag hosted apps hain. Har row par hover ya focus karke uska asli output dekhein.</p>
+      <div class="work-grid">
+        <ul class="ledger" id="ledger" aria-label="Live projects" data-rise></ul>
+        <div class="preview" id="preview" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="outputs" class="section wrap" aria-labelledby="outs-title">
+      <h2 id="outs-title" class="h2 display" data-rise>Asli output, sample data par</h2>
+      <p class="lead" style="margin-top:20px;--i:1" data-rise>Ye numbers tools ke apne formulas se abhi calculate hue hain.</p>
+      <div class="outs" id="outs" data-rise></div>
+    </section>
+
+    <section id="tools" class="section wrap" aria-labelledby="tools-title">
+      <div class="tools-head">
+        <h2 id="tools-title" class="h2 display" data-rise>20 tools, ek jagah</h2>
+      </div>
+      <div class="tools-controls" data-rise>
+        <label class="sr-only" for="search-box">Search tools</label>
+        <input id="search-box" class="search" type="search" oninput="renderGrid()" placeholder="Search: SIP, loan, stock, rashi" autocomplete="off" />
+        <div id="cat-bar" class="cats" role="group" aria-label="Filter tools by category">
+          <button class="chip" data-c="all" aria-pressed="true" onclick="setCat('all')">All (20)</button>
+          <button class="chip" data-c="finance" aria-pressed="false" onclick="setCat('finance')">Finance (6)</button>
+          <button class="chip" data-c="creator" aria-pressed="false" onclick="setCat('creator')">Creator (6)</button>
+          <button class="chip" data-c="astro" aria-pressed="false" onclick="setCat('astro')">Astro and naming (4)</button>
+          <button class="chip" data-c="life" aria-pressed="false" onclick="setCat('life')">Strategy and travel (4)</button>
+        </div>
+      </div>
+      <div id="projects-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="games" class="section" aria-labelledby="games-title">
+      <div class="wrap">
+        <h2 id="games-title" class="h2 display" data-rise>8 games, sirf time-pass</h2>
+        <p class="lead soft games-note" data-rise>Reaction speed, typing WPM, memory, mental math aur trivia. Yahan kuch serious nahi hai.</p>
+      </div>
+      <div class="tiles" id="arcade-grid" data-rise></div>
+    </section>
+
+    <section id="contact" class="connect" aria-labelledby="contact-title">
+      <div class="connect-in">
+        <p class="eyebrow" data-rise>Let's connect</p>
+        <h2 id="contact-title" class="display connect-h" data-rise>Chalo, baat karte hain</h2>
+        <p class="lead" data-rise style="--i:1">Project, collaboration ya job interview: neeche kisi bhi logo par ek tap karein aur seedha mere profile par pahunch jayein.</p>
+        <div class="soc-grid" data-rise style="--i:2">
+          <a class="scard c-li" href="https://in.linkedin.com/in/akashdas50" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile, akashdas50">
+            <span class="sico"><svg width="30" height="30"><use href="#i-in"/></svg></span>
+            <span class="sname">LinkedIn</span><span class="shandle">akashdas50</span>
+            <span class="sgo" aria-hidden="true"><svg width="22" height="22"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="scard c-ig" href="https://www.instagram.com/aakashdas_007/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile, aakashdas_007">
+            <span class="sico"><svg width="30" height="30"><use href="#i-ig"/></svg></span>
+            <span class="sname">Instagram</span><span class="shandle">@aakashdas_007</span>
+            <span class="sgo" aria-hidden="true"><svg width="22" height="22"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="scard c-fb" href="https://www.facebook.com/aakashdas007" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile, aakashdas007">
+            <span class="sico"><svg width="30" height="30"><use href="#i-fb"/></svg></span>
+            <span class="sname">Facebook</span><span class="shandle">aakashdas007</span>
+            <span class="sgo" aria-hidden="true"><svg width="22" height="22"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="scard c-gh" href="https://github.com/Aakashpro50" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile, Aakashpro50">
+            <span class="sico"><svg width="30" height="30"><use href="#i-gh"/></svg></span>
+            <span class="sname">GitHub</span><span class="shandle">Aakashpro50</span>
+            <span class="sgo" aria-hidden="true"><svg width="22" height="22"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+        <div class="connect-foot" data-rise style="--i:3"><button class="btn" onclick="openResume()">Resume download</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot on-dark">
+    <div class="foot-row">
+      <span>© 2026 Aakash Das. Hosted on GitHub Pages.</span>
+      <a class="link" href="#top">Back to top</a>
+    </div>
+    <div class="word display" aria-hidden="true">Aakash Das</div>
+  </footer>
+
+  <!-- Tool and game dialog -->
+  <dialog id="app-modal" class="dlg" aria-labelledby="m-title" data-ui>
+    <div class="dlg-head">
+      <div>
+        <p id="m-badge" class="dlg-kind">Tool</p>
+        <h2 id="m-title" class="dlg-title display">Tool title</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a id="m-ext" class="ext" href="#" target="_blank" rel="noopener noreferrer" hidden>Open live app ↗</a>
+        <button class="dlg-x" onclick="closeApp()" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="dlg-body">
+      <div id="m-inputs" class="lg:col-span-5" style="display:grid;gap:16px;align-content:start"></div>
+      <div id="m-output" class="lg:col-span-7" aria-live="polite"></div>
+    </div>
+  </dialog>
+
+  <!-- Resume dialog -->
+  <dialog id="vault-modal" class="dlg dlg-resume" aria-labelledby="resume-title" data-ui>
+    <div class="dlg-head">
+      <div>
+        <p class="dlg-kind">Aakash Das</p>
+        <h2 id="resume-title" class="dlg-title display">Resume</h2>
+      </div>
+      <button class="dlg-x" onclick="closeResume()" aria-label="Close">&times;</button>
+    </div>
+    <div class="stack">
+      <p style="color:#c9c8c0">Job interviews ke liye Recruiter PIN dalein, ya seedha LinkedIn par connect karein.</p>
+      <div id="pin-row" style="display:flex; flex-wrap:wrap; gap:10px">
+        <input type="password" id="pin-in" inputmode="numeric" placeholder="Enter PIN" aria-label="Recruiter PIN" onkeydown="if(event.key==='Enter')checkPin()" style="flex:1 1 140px; min-width:0; min-height:52px; background:rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.25); color:#fff; padding:0 14px; font-size:1rem" />
+        <button class="btn" onclick="checkPin()">Unlock</button>
+      </div>
+      <p id="pin-err" class="small" style="color:#ff9a9a; display:none" role="alert">Galat PIN. LinkedIn par connect karein ya sahi PIN dalein.</p>
+      <div id="vault-unlocked" class="stack" hidden>
+        <button class="btn" onclick="dlResumePDF()" id="pdf-btn">Download resume PDF</button>
+        <a class="btn btn-alt" href="https://akash-ai-ventures.lovable.app/" target="_blank" rel="noopener noreferrer">Open interactive web resume ↗</a>
+        <p id="pdf-msg" class="small" style="color:#c9c8c0" role="status"></p>
+      </div>
+      <a class="btn btn-alt" href="https://in.linkedin.com/in/akashdas50" target="_blank" rel="noopener noreferrer">View LinkedIn profile ↗</a>
+    </div>
+  </dialog>
+
+  <script>
+    // =========================================================================
+    // 20 IN-PAGE TOOLS CONFIGURATION
+    // =========================================================================
+    const APPS = [
+      { id:'script', act:'Generate script', cat:'creator', tag:'Creator tool', title:'Hinglish Script & Video Prompt Studio', desc:'Topic, mood aur format se scene-by-scene Hinglish script aur AI video prompts banayein.', url:'https://script-prompt.lovable.app/', fields:[{l:'Video Topic / Idea',t:'text',v:'AI tools jo creators ka time bachayein'},{l:'Tone & Style',t:'select',o:['High-Energy Hinglish','Cinematic Storytelling','Comedy / Observational']},{l:'Target Video Model',t:'select',o:['Runway Gen-3 / Kling','Midjourney + Luma','Sora / Cinematic 4K']}] },
+      { id:'stock', act:'Calculate', cat:'finance', tag:'Indicator maths demo', title:'Stock Sense AI · Price Series Calculator', desc:'Apne closing prices paste karein aur real SMA, EMA, RSI(14) aur MACD(12,26,9) indicators calculate karein.', url:'https://stock-sense-ai-87.lovable.app/', fields:[{l:'Label / Ticker Name',t:'text',v:'SAMPLE SERIES'},{l:'Closing Prices (comma-separated, oldest to newest)',t:'textarea',v:'102, 104, 103, 106, 108, 107, 110, 112, 111, 115, 117, 116, 119, 121, 120, 123, 125, 124, 128, 130, 129, 131, 133, 132, 135, 134, 137, 139, 138, 136, 138, 141, 143, 142, 145, 144, 147, 149, 148, 151'},{l:'SMA Period (needs at least N prices)',t:'number',v:10},{l:'EMA Period (needs at least N prices)',t:'number',v:10}] },
+      { id:'ank', act:'Calculate', cat:'astro', tag:'Numerology', title:'Ank Jyotish Magic · Numerology Calculator', desc:'Naam aur Date of Birth se Mulank (Driver), Bhagyank (Conductor) aur Chaldean Name Number calculate karein.', url:'https://ank-jyotish-magic.lovable.app/', fields:[{l:'Full Name',t:'text',v:'',p:'Example: your full name'},{l:'Date of Birth (optional)',t:'date',v:''}] },
+      { id:'rashi', act:'Show rashi', cat:'astro', tag:'Sign and rashi reference', title:'Rashi Reference & Western Sun Sign Explorer', desc:'12 Rashiyon ke distinct Swami Grah, Tatva aur traits dekhein, ya DOB se apna date-based Western Sun Sign janein.', fields:[{l:'Select Traditional Rashi (Reference Profile)',t:'select',o:['1. Mesh (Aries)','2. Vrishabha (Taurus)','3. Mithun (Gemini)','4. Karka (Cancer)','5. Simha (Leo)','6. Kanya (Virgo)','7. Tula (Libra)','8. Vrishchika (Scorpio)','9. Dhanu (Sagittarius)','10. Makar (Capricorn)','11. Kumbha (Aquarius)','12. Meen (Pisces)']},{l:'Optional Birth Date (Western Sun Sign Only)',t:'date',v:''}] },
+      { id:'sip', act:'Calculate', cat:'finance', tag:'Wealth calculator', title:'WealthForge · Step-Up SIP Simulator', desc:'Monthly SIP, Annual Step-Up % aur assumed return rate se long-term compounding projections calculate karein.', fields:[{l:'Monthly SIP (₹)',t:'number',v:10000},{l:'Annual Step-Up (%)',t:'number',v:10},{l:'Assumed Annual Return (% p.a.)',t:'number',v:12},{l:'Duration (Years)',t:'number',v:15}] },
+      { id:'trade', act:'Calculate', cat:'finance', tag:'Position sizer', title:'TradeMatrix Pro · Risk & Position Sizer', desc:'Account capital, Risk %, Entry aur Stop-Loss price se exact share quantity aur 1:2 / 1:3 levels nikalein.', fields:[{l:'Total Capital (₹)',t:'number',v:200000},{l:'Risk Per Trade (%)',t:'number',v:1},{l:'Entry Price (₹)',t:'number',v:450},{l:'Stop-Loss Price (₹)',t:'number',v:435}] },
+      { id:'loan-hack', act:'Calculate', cat:'finance', tag:'EMI and SIP planner', title:'Loan EMI & Companion SIP Planner', desc:'Loan EMI aur total interest calculate karein, aur dekhein ek parallel SIP assumed return par kitna corpus bana sakti hai.', fields:[{l:'Loan Principal (₹)',t:'number',v:2500000},{l:'Loan Interest Rate (% p.a.)',t:'number',v:8.5},{l:'Loan Tenure (Years)',t:'number',v:20},{l:'Companion Monthly SIP (% of EMI)',t:'number',v:15},{l:'Assumed SIP Annual Return (% p.a.)',t:'number',v:12}] },
+      { id:'fire', act:'Calculate', cat:'finance', tag:'Retirement planner', title:'FIRE & Retirement Corpus Estimator', desc:'Inflation adjustment aur 25x annual expense rule ke hisaab se target retirement corpus estimate karein.', fields:[{l:'Current Monthly Expense (₹)',t:'number',v:35000},{l:'Current Age (Years)',t:'number',v:31},{l:'Target Retirement Age',t:'number',v:46},{l:'Assumed Inflation (% p.a.)',t:'number',v:6}] },
+      { id:'mf-leak', act:'Calculate', cat:'finance', tag:'Expense ratio compare', title:'Direct vs Regular MF Commission Estimator', desc:'Editable Direct aur Regular return assumptions ke saath long-term compounding difference compare karein.', fields:[{l:'Monthly SIP Amount (₹)',t:'number',v:15000},{l:'Horizon (Years)',t:'number',v:20},{l:'Assumed Direct Plan Return (% p.a.)',t:'number',v:13.0},{l:'Assumed Regular Plan Return (% p.a.)',t:'number',v:12.0}] },
+      { id:'comedy', act:'Draft bit', cat:'creator', tag:'Stand-up and hooks', title:'BrainWala Studio · Stand-Up & Hook Drafts', desc:'Kisi bhi everyday topic par Premise-Setup-Punchline structure aur short-form opening hooks draft karein.', fields:[{l:'Observation / Topic',t:'text',v:'Middle class family train journey'},{l:'Format',t:'select',o:['Stand-Up Comedy Bit','YouTube Short / Reel','Podcast Opening Monologue']}] },
+      { id:'yt-calc', act:'Calculate', cat:'creator', tag:'Creator estimator', title:'YouTube RPM & Sponsorship Estimator', desc:'Average views aur assumed RPM ke hisaab se AdSense aur brand integration range estimate karein.', fields:[{l:'Average Views Per Video',t:'number',v:50000},{l:'Assumed Niche RPM (₹ per 1,000 views)',t:'number',v:75}] },
+      { id:'podcast', act:'Generate questions', cat:'creator', tag:'Interview prep', title:'Podcast Guest Question Architect', desc:'Guest profile aur podcast vibe ke hisaab se Ice-Breaker, Deep aur Rapid-Fire Hinglish questions banayein.', fields:[{l:'Guest Role / Topic',t:'text',v:'Equity Investor & FinTech Builder'},{l:'Conversation Vibe',t:'select',o:['Deep & Analytical','Candid & Relatable','Bold / Contrarian']}] },
+      { id:'ctr', act:'Score title', cat:'creator', tag:'Title checklist', title:'Video Title Strength Checklist Scorer', desc:'Apne video title ki length, numbers, brackets, question format aur power words ke hisaab se heuristic score check karein.', fields:[{l:'Enter Draft Video Title',t:'text',v:'How to Build a Step-Up SIP Plan in 2026 [Complete Guide]'}] },
+      { id:'persona', act:'Build prompt', cat:'creator', tag:'Prompt builder', title:'PersonaLock AI · Portrait Prompt Builder', desc:'Identity-preserving instructions ke saath Camera Lens, Lighting aur Wardrobe ke structured prompts banayein.', fields:[{l:'Environment / Backdrop',t:'select',o:['Misty Darjeeling Hills at Golden Hour','Stand-Up Comedy Stage with Neon Sign','Warm Podcast Studio Setup','Cinematic Moody Portrait Studio']},{l:'Wardrobe / Outfit',t:'select',o:['Denim Shirt & Eyeglasses','Charcoal Blazer & Dark Tee','Winter Layered Travel Jacket']},{l:'Camera & Lens',t:'select',o:['85mm f/1.4 Prime Portrait Lens','35mm f/1.8 Environmental Storytelling Lens']}] },
+      { id:'brand-num', act:'Calculate', cat:'astro', tag:'Chaldean naming', title:'Channel & Brand Name Numerology Tool', desc:'Chaldean letter values ke hisaab se kisi bhi YouTube channel ya startup name ka compound aur root number nikalein.', fields:[{l:'Channel or Brand Name',t:'text',v:'',p:'Example: your channel or brand name'}] },
+      { id:'compat', act:'Check match', cat:'astro', tag:'Fun name match', title:'Name & Element Compatibility Mixer', desc:'Do naamon aur element pairing se fun deterministic harmony score aur traits dekhein (entertainment only).', fields:[{l:'First Name',t:'text',v:'',p:'Example: first name'},{l:'Second Name',t:'text',v:'',p:'Example: second name'},{l:'Element Pairing',t:'select',o:['Fire + Air (Dynamic)','Fire + Fire (High Energy)','Earth + Water (Grounded)','Air + Water (Creative)']}] },
+      { id:'travel', act:'Estimate budget', cat:'life', tag:'Trip planner', title:'Indian Trip & Vlog Budget Estimator', desc:'Destination, days aur travel style ke hisaab se per-person cost breakdown aur vlogging checklist banayein.', fields:[{l:'Destination',t:'select',o:['Darjeeling & Kurseong Hills','Varanasi & Ayodhya','Goa Coastal Circuit','Manali & Solang Valley']},{l:'Number of Days',t:'number',v:4},{l:'Travel Style',t:'select',o:['Smart Budget (₹2,200/day)','Comfort Mid-Range (₹3,800/day)','Premium Stay & Transit (₹6,500/day)']}] },
+      { id:'chess', act:'Show opening', cat:'life', tag:'Chess reference', title:'Chess Opening Explorer (Reference Guide)', desc:'Popular chess openings ke accurate move orders, core middlegame plans aur common tactical traps padhein.', fields:[{l:'Select Chess Opening',t:'select',o:['1. Queen\'s Gambit (1.d4 d5 2.c4)','2. Sicilian Defense · Najdorf/Open (1.e4 c5)','3. London System (1.d4 & 2.Bf4)','4. Italian Game / Giuoco Piano (1.e4 e5 2.Nf3 Nc6 3.Bc4)','5. Caro-Kann Defense (1.e4 c6)','6. King\'s Indian Defense (1.d4 Nf6 2.c4 g6)']}] },
+      { id:'mind', act:'Show meaning', cat:'life', tag:'Communication guide', title:'MindDecode · Body Language Reference', desc:'Meetings aur interviews mein dikhne wale common non-verbal cues ka distinct interpretation aur conversation tip dekhein.', fields:[{l:'Select Observed Cue',t:'select',o:['1. Crossed arms + leaning back','2. Steepled fingers + steady eye contact','3. Touching neck/collarbone while answering','4. Posture mirroring + open palms','5. Rapid foot tapping / checking watch','6. Head tilted slightly + slow nodding']}] },
+      { id:'letter', act:'Draft letter', cat:'life', tag:'Letter drafter', title:'Official Representation & Salary Drafter', desc:'Formal grievance representation, dues clearance request ya salary increment pitch ke clean drafts generate karein.', fields:[{l:'Letter Category',t:'select',o:['Official Grievance / Dues Representation','Salary Increment & Performance Review Pitch','Vendor / Client Project Proposal']},{l:'Subject / Key Context',t:'text',v:'Request for early settlement of pending service dues and final clearance'}] }
+    ];
+
+    // =========================================================================
+    // 8 BROWSER GAMES CONFIGURATION
+    // =========================================================================
+    const GAMES = [
+      { id:'g-reflex', title:'Reaction Speed Master', desc:'Wait for the pad to turn green (2–5s random delay) and tap as fast as you can. Measures real latency via performance.now().', icon:'', tag:'REAL LATENCY' },
+      { id:'g-typing', title:'Typing Speed & Accuracy Test', desc:'Type the target tech prompt accurately. Computes real WPM and character accuracy from your live keystrokes.', icon:'⌨', tag:'LIVE WPM' },
+      { id:'g-math', title:'Mental Math Blitz', desc:'Solve dynamically generated arithmetic challenges. Tracks your live score and consecutive answer streak.', icon:'', tag:'ARITHMETIC' },
+      { id:'g-market', title:'Next Candle Predictor (50/50 Sim)', desc:'Pure 50/50 random candle simulator with virtual balance. Test how randomness feels in short-term guessing.', icon:'', tag:'RANDOM SIM' },
+      { id:'g-word', title:'Tech & Finance Word Scramble', desc:'Unscramble genuinely shuffled letters from 12 tech & finance terms. Includes hints, skip, and score tracking.', icon:'', tag:'WORD PUZZLE' },
+      { id:'g-memory', title:'Pattern Sequence Memory (Simon)', desc:'Watch the 4 colored pads flash in a growing random sequence and repeat the pattern step-by-step.', icon:'', tag:'MEMORY' },
+      { id:'g-trivia', title:'10-Question Tech & Finance Trivia', desc:'10 multiple-choice questions across Indian markets, computing, and science with instant explanations and score.', icon:'', tag:'10-Q QUIZ' },
+      { id:'g-tycoon', title:'AI Studio Clicker Tycoon', desc:'Click to ship micro-tools and spend points on automated scripts, GPU nodes, and agents to boost passive output.', icon:'', tag:'IDLE TYCOON' }
+    ];
+
+    // =========================================================================
+    // PAGE UI: ledger, tool list, game tiles, dialogs, live EMI, resume, motion
+    // =========================================================================
+    let activeCat = 'all', currentApp = null;
+
+    const CAT_ORDER = ['finance', 'creator', 'astro', 'life'];
+    const CAT_LABEL = {
+      finance: 'Finance and calculators',
+      creator: 'Creator and prompt tools',
+      astro: 'Astro and naming',
+      life: 'Strategy, travel and career'
+    };
+    const GAME_LOOK = {
+      'g-reflex':  { word: 'Reflex', short: 'Reaction speed',   cls: 't1' },
+      'g-typing':  { word: 'Typing', short: 'Typing speed',     cls: 't2' },
+      'g-math':    { word: 'Math',   short: 'Mental math',      cls: 't3' },
+      'g-market':  { word: 'Candle', short: 'Candle guess',     cls: 't4' },
+      'g-word':    { word: 'Words',  short: 'Word scramble',    cls: 't3' },
+      'g-memory':  { word: 'Simon',  short: 'Pattern memory',   cls: 't4' },
+      'g-trivia':  { word: 'Trivia', short: 'Tech and finance', cls: 't1' },
+      'g-tycoon':  { word: 'Tycoon', short: 'AI studio clicker', cls: 't2' }
+    };
+    const PROJECT_KIND = {
+      script: 'AI script and video prompts',
+      stock: 'SMA, EMA, RSI and MACD maths',
+      ank: 'Numerology calculator'
+    };
+
+    function setCat(c) {
+      activeCat = c;
+      document.querySelectorAll('#cat-bar .chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.c === c)));
+      renderGrid();
+    }
+
+    // Live projects: a quiet ledger. Hover or focus a row to see that app's real output.
+    function renderProjects() {
+      const projs = APPS.filter(a => a.url);
+      document.getElementById('ledger').innerHTML = projs.map(a => `
+        <li class="lrow" data-id="${a.id}" onmouseenter="showPreview('${a.id}')" onfocusin="showPreview('${a.id}')">
+          <h3><button onclick="openApp('${a.id}')">${a.title}</button></h3>
+          <p class="kind">${PROJECT_KIND[a.id] || ''}</p>
+          <div class="acts">
+            <button class="link" onclick="openApp('${a.id}')" aria-label="Try ${esc(a.title)} here on this page">Try here</button>
+            <a class="link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit live app: ${esc(a.title)}">Live app ↗</a>
+          </div>
+        </li>`).join('');
+      if (projs[0]) showPreview(projs[0].id);
+    }
+
+    function samplePrices(a) { return String(a.fields[1].v).split(/[\s,]+/).filter(Boolean).map(Number).filter(n => Number.isFinite(n) && n > 0); }
+
+    function previewFor(id) {
+      const a = APPS.find(x => x.id === id);
+      if (!a) return '';
+      if (id === 'script') {
+        const topic = esc(a.fields[0].v);
+        return `<div class="frag" data-ui><h4>Sample output: opening hook</h4><blockquote>"Bhai, agar aap abhi bhi <strong>${topic}</strong> ko purane manual tarike se kar rahe ho, toh yeh 30-second breakdown aapka ghanton ka kaam bacha dega."</blockquote><p class="cap">Scene 1, first 5 seconds. Same logic as the in-page tool.</p></div>`;
+      }
+      if (id === 'stock') {
+        const prices = samplePrices(a);
+        const sma = prices.slice(-10).reduce((x, y) => x + y, 0) / 10;
+        const ema = computeEMA(prices, 10), rsi = computeRSI14(prices), macd = computeMACD(prices);
+        return `<div class="frag" data-ui><h4>Computed from a ${prices.length}-price sample series</h4><dl>
+          <dt>Latest close</dt><dd>${prices[prices.length - 1].toFixed(2)}</dd>
+          <dt>SMA(10)</dt><dd>${sma.toFixed(2)}</dd>
+          <dt>EMA(10)</dt><dd>${ema.toFixed(2)}</dd>
+          <dt>Wilder RSI(14)</dt><dd>${rsi.toFixed(2)}</dd>
+          <dt>MACD histogram</dt><dd>${macd ? macd.hist.toFixed(2) : 'n/a'}</dd></dl>
+          <p class="cap">Educational demo. Paste your own prices in the tool.</p></div>`;
+      }
+      if (id === 'ank') {
+        return `<div class="frag" data-ui><h4>Kaise kaam karta hai</h4><dl>
+          <dt>Aap daalein</dt><dd>Naam + DOB</dd>
+          <dt>Aapko milega</dt><dd>3 numbers</dd></dl>
+          <p class="cap">Mulank, Bhagyank aur Chaldean name number. Naam aur date aap khud daalte hain, kuch pehle se bhara nahi hota.</p></div>`;
+      }
+      return '';
+    }
+
+    function showPreview(id) {
+      const el = document.getElementById('preview');
+      if (el && el.dataset.id !== id) { el.dataset.id = id; el.innerHTML = previewFor(id); }
+    }
+
+    // Tool list: one line per tool, grouped by category.
+    function renderGrid() {
+      const q = (document.getElementById('search-box').value || '').trim().toLowerCase();
+      const out = [];
+      CAT_ORDER.forEach(cat => {
+        if (activeCat !== 'all' && activeCat !== cat) return;
+        const rows = APPS.filter(a => a.cat === cat && (!q || (a.title + ' ' + a.desc + ' ' + a.tag).toLowerCase().includes(q)));
+        if (!rows.length) return;
+        out.push(`<h3 class="tgroup">${CAT_LABEL[cat]}</h3>`);
+        rows.forEach(a => out.push(`
+          <article class="trow">
+            <div><h4>${a.title}</h4><span class="small soft">${a.tag}</span></div>
+            <p>${a.desc}</p>
+            <div class="acts">
+              <button class="btn" onclick="openApp('${a.id}')" aria-label="Open tool: ${esc(a.title)}">Open</button>
+              ${a.url ? `<a class="link" href="${a.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit live app: ${esc(a.title)}">Live ↗</a>` : ''}
+            </div>
+          </article>`));
+      });
+      document.getElementById('projects-grid').innerHTML = out.length ? out.join('') : '<p class="empty">Koi tool nahi mila. Doosra shabd search karke dekhein.</p>';
+    }
+
+    // Real outputs on sample inputs, computed with the tools' own formulas
+    function renderOutputs() {
+      const sip = (m, st, r, y) => { let c = 0, inv = 0; const mr = r / 1200; for (let a = 0; a < y; a++) { for (let k = 0; k < 12; k++) { inv += m; c = (c + m) * (1 + mr); } m *= 1 + st / 100; } return { inv, c }; };
+      const s = sip(10000, 10, 12, 15);
+      const risk = 200000 * 0.01, qty = Math.floor(risk / (450 - 435));
+      const fire = 35000 * Math.pow(1.06, 15) * 12 * 25;
+      const emi = emiOf(2500000, 8.5, 20);
+      const card = (t, rows, cap) => `<div class="frag" data-ui><h4>${t}</h4><dl>${rows.map(r => `<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join('')}</dl><p class="cap">${cap}</p></div>`;
+      document.getElementById('outs').innerHTML = [
+        card('Step-up SIP', [['Invested', inr(s.inv)], ['Projected', inr(s.c)]], '₹10,000/mo, 10% step-up, 12% p.a., 15 years'),
+        card('Position sizer', [['Risk amount', inr(risk)], ['Quantity', qty + ' shares']], '₹2,00,000 capital, 1% risk, entry 450, stop 435'),
+        card('FIRE corpus', [['In 15 years', inr(fire)]], '₹35,000/mo today, 6% inflation, 25x rule'),
+        card('Loan EMI', [['Monthly EMI', inr(emi)], ['Total interest', inr(emi * 240 - 2500000)]], '₹25,00,000, 8.5% p.a., 20 years')
+      ].join('');
+    }
+
+    // Game tiles: a wall of words, no pictures needed.
+    function renderArcade() {
+      document.getElementById('arcade-grid').innerHTML = GAMES.map(g => {
+        const look = GAME_LOOK[g.id];
+        return `<button class="tile ${look.cls}" onclick="openGame('${g.id}')" aria-label="Play ${esc(g.title)}">
+          <span class="word display">${look.word}</span><span class="cap">${look.short}</span></button>`;
+      }).join('');
+    }
+
+    // ---------------------------------------------------------------------
+    // Dialogs (native <dialog>: focus stays inside, Escape closes, focus returns)
+    // ---------------------------------------------------------------------
+    function openDialog(dlg) {
+      if (!dlg.open) dlg.showModal();
+      document.documentElement.classList.add('lock');
+    }
+    function setDialogHead(kind, title, ext) {
+      document.getElementById('m-badge').textContent = kind;
+      document.getElementById('m-title').textContent = title;
+      const e = document.getElementById('m-ext');
+      if (ext) { e.href = ext; e.hidden = false; } else { e.hidden = true; }
+    }
+
+    function openApp(id) {
+      cleanupGameTimers();
+      currentApp = APPS.find(x => x.id === id);
+      if (!currentApp) return;
+      document.getElementById('app-modal').classList.remove('is-game');
+      setDialogHead(currentApp.tag, currentApp.title, currentApp.url);
+      document.getElementById('m-output').setAttribute('aria-live', 'polite');
+      document.getElementById('m-inputs').innerHTML = `
+        <p class="text-sm" style="color:#c9c8c0">${currentApp.desc}</p>
+        ${currentApp.fields.map((f, i) => `
+          <div>
+            <label for="f-${i}" class="text-sm block mb-1">${f.l}</label>
+            ${f.t === 'select'
+              ? `<select id="f-${i}" onchange="computeApp()" class="w-full border border-white/30 px-3">${f.o.map(o => `<option>${o}</option>`).join('')}</select>`
+              : f.t === 'textarea'
+              ? `<textarea id="f-${i}" oninput="computeApp()" rows="4" class="w-full border border-white/30 p-3">${f.v}</textarea>`
+              : `<input id="f-${i}" oninput="computeApp()" type="${f.t}" value="${f.v}" ${f.p ? 'placeholder="' + f.p + '"' : ''} step="any" ${f.t === 'number' ? 'inputmode="decimal"' : ''} class="w-full border border-white/30 px-3" />`}
+          </div>`).join('')}
+        <button onclick="computeApp()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-base px-5" style="min-height:52px">${currentApp.act || 'Calculate'}</button>`;
+      openDialog(document.getElementById('app-modal'));
+      computeApp();
+    }
+
+    function closeApp() {
+      const d = document.getElementById('app-modal');
+      if (d.open) d.close();
+    }
+
+    function openResume() {
+      document.getElementById('pdf-msg').textContent = '';
+      const u = document.getElementById('vault-unlocked'), r = document.getElementById('pin-row'), p = document.getElementById('pin-in'), e = document.getElementById('pin-err');
+      if (u) u.hidden = true;
+      if (r) r.style.display = 'flex';
+      if (p) p.value = '';
+      if (e) e.style.display = 'none';
+      openDialog(document.getElementById('vault-modal'));
+    }
+    function checkPin() {
+      const p = document.getElementById('pin-in'), e = document.getElementById('pin-err'), u = document.getElementById('vault-unlocked'), r = document.getElementById('pin-row');
+      if (p.value.trim() === '2026') {
+        e.style.display = 'none';
+        r.style.display = 'none';
+        u.hidden = false;
+      } else {
+        e.style.display = 'block';
+        u.hidden = true;
+      }
+    }
+    function closeResume() {
+      const d = document.getElementById('vault-modal');
+      if (d.open) d.close();
+    }
+
+    function wireDialogs() {
+      ['app-modal', 'vault-modal'].forEach(id => {
+        const d = document.getElementById(id);
+        d.addEventListener('click', e => { if (e.target === d) d.close(); });
+        d.addEventListener('close', () => {
+          cleanupGameTimers();
+          if (!document.querySelector('dialog[open]')) document.documentElement.classList.remove('lock');
+        });
+      });
+    }
+
+    // ---------------------------------------------------------------------
+    // The live thing: EMI figure in the hero band
+    // ---------------------------------------------------------------------
+    function emiOf(P, ratePct, years) {
+      const r = ratePct / 12 / 100, n = years * 12;
+      return r > 0 ? P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : P / n;
+    }
+    let emiShown = 0, emiRaf = 0;
+    function updateEmi() {
+      const P = parseFloat(document.getElementById('emi-p').value);
+      const r = parseFloat(document.getElementById('emi-r').value);
+      const y = parseFloat(document.getElementById('emi-y').value);
+      const fig = document.getElementById('emi-fig'), note = document.getElementById('emi-note');
+      if (!(P > 0) || !(r > 0 && r <= 40) || !(y >= 1 && y <= 40)) {
+        fig.textContent = '₹0';
+        note.textContent = 'Loan amount, rate (0.1 se 40%) aur tenure (1 se 40 saal) dalein.';
+        emiShown = 0;
+        return;
+      }
+      const emi = emiOf(P, r, Math.round(y)), total = emi * Math.round(y) * 12;
+      note.textContent = `har mahine. Kul byaj ${inr(total - P)}, kul bhugtan ${inr(total)}.`;
+      const from = emiShown, to = emi, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      cancelAnimationFrame(emiRaf);
+      if (reduce || !from) { fig.textContent = inr(to); emiShown = to; return; }
+      const t0 = performance.now();
+      const step = now => {
+        const k = Math.min(1, (now - t0) / 380), e = 1 - Math.pow(1 - k, 3);
+        emiShown = from + (to - from) * e;
+        fig.textContent = inr(emiShown);
+        if (k < 1) emiRaf = requestAnimationFrame(step);
+      };
+      emiRaf = requestAnimationFrame(step);
+    }
+
+    // ---------------------------------------------------------------------
+    // Resume PDF: jsPDF is loaded only when someone asks for the file
+    // ---------------------------------------------------------------------
+    function loadJsPDF() {
+      return new Promise((resolve, reject) => {
+        if (window.jspdf && window.jspdf.jsPDF) return resolve();
+        const s = document.createElement('script');
+        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error('jsPDF failed to load'));
+        document.head.appendChild(s);
+      });
+    }
+
+    function buildResumePDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+      const X = 20, W = 170;
+      let y = 22;
+      const text = (str, size, style, color, gap) => {
+        doc.setFont('helvetica', style);
+        doc.setFontSize(size);
+        doc.setTextColor(color[0], color[1], color[2]);
+        const lines = doc.splitTextToSize(str, W);
+        const lh = size * 0.3528 * 1.4;
+        lines.forEach(l => { doc.text(l, X, y); y += lh; });
+        y += gap;
+      };
+      const head = str => { y += 4; text(str, 12, 'bold', [20, 20, 20], 1.5); };
+
+      text('AAKASH DAS', 22, 'bold', [15, 23, 42], 1);
+      text('AI Product Builder | FinTech & Creator Tools | Procurement & Operations', 10.5, 'normal', [70, 70, 70], 1);
+      text('Portfolio: https://aakashpro50.github.io', 10, 'normal', [70, 70, 70], 0);
+      text('LinkedIn: in.linkedin.com/in/akashdas50', 10, 'normal', [70, 70, 70], 0);
+      text('GitHub: github.com/Aakashpro50', 10, 'normal', [70, 70, 70], 2);
+      doc.setDrawColor(180, 180, 180);
+      doc.line(X, y, X + W, y);
+      y += 4;
+
+      head('EXECUTIVE SUMMARY');
+      text('Versatile professional combining practical procurement and administrative operations experience with hands-on AI web application development, financial market prototyping, interactive tools, and digital media workflows.', 10, 'normal', [55, 55, 55], 2);
+
+      head('FEATURED TOOL SUITE (20 IN-PAGE TOOLS & 8-GAME BROWSER ARCADE)');
+      [
+        '1. Hinglish Script & Video Prompt Studio (script-prompt.lovable.app): AI storytelling & video prompt engine.',
+        '2. Stock Sense AI, Price Series Calculator (stock-sense-ai-87.lovable.app): SMA, EMA, RSI(14) & MACD indicator math.',
+        '3. Ank Jyotish Magic (ank-jyotish-magic.lovable.app): Mulank, Bhagyank & Chaldean numerology calculators.',
+        '4. FinTech Suite (aakashpro50.github.io): WealthForge Step-Up SIP, Loan EMI & Companion SIP Planner, FIRE & TradeMatrix Pro.',
+        '5. Creator & Strategy Suite: BrainWala Comedy Hooks, PersonaLock AI, MindDecode & 8-Game Browser Arcade.'
+      ].forEach(l => text(l, 9.5, 'normal', [50, 50, 50], 1.2));
+
+      head('EXPERIENCE & CORE COMPETENCIES');
+      [
+        '• Procurement Management, Purchase Orders, Vendor Coordination & Process Documentation',
+        '• Multimodal AI Prompt Engineering, Web App Prototyping & Equity/Mutual Fund Research',
+        '• Verified Professional Profile: https://in.linkedin.com/in/akashdas50'
+      ].forEach(l => text(l, 10, 'normal', [55, 55, 55], 1));
+
+      doc.setProperties({ title: 'Aakash Das, Resume', author: 'Aakash Das' });
+      return doc;
+    }
+
+    async function dlResumePDF() {
+      const msg = document.getElementById('pdf-msg');
+      msg.textContent = 'PDF ban raha hai...';
+      try {
+        await loadJsPDF();
+        buildResumePDF().save('Aakash_Das_Resume.pdf');
+        msg.textContent = 'Download shuru ho gaya.';
+      } catch (e) {
+        msg.textContent = 'PDF engine load nahi hua. Internet check karke dobara try karein.';
+      }
+    }
+
+    // ---------------------------------------------------------------------
+    // Motion: entrances triggered once as each part scrolls in
+    // ---------------------------------------------------------------------
+    function initReveal() {
+      const els = Array.from(document.querySelectorAll('[data-rise]'));
+      if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+      const io = new IntersectionObserver(entries => entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      els.forEach(el => io.observe(el));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProjects();
+      renderGrid();
+      renderArcade();
+      renderOutputs();
+      wireDialogs();
+      ['emi-p', 'emi-r', 'emi-y'].forEach(id => document.getElementById(id).addEventListener('input', updateEmi));
+      updateEmi();
+      initReveal();
+    });
+
+
+    function val(i) { const el = document.getElementById('f-'+i); return el ? el.value : ''; }
+    function num(i) { const v = parseFloat(val(i)); return Number.isFinite(v) ? v : NaN; }
+    function inr(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+    function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    function copyFrom(id, btn) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const done = () => { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = 'Copy again'; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(el.value).then(done, () => { el.select(); });
+      else { el.select(); document.execCommand('copy'); done(); }
+    }
+
+
+    const CHALDEAN = {A:1,I:1,J:1,Q:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5,X:5, U:6,V:6,W:6, O:7,Z:7, F:8,P:8};
+    function reduceDigit(n) { while (n > 9) { n = String(n).split('').reduce((a, b) => a + Number(b), 0); } return n; }
+    function numerologyOf(name, dob) {
+      const letters = String(name).toUpperCase().replace(/[^A-Z]/g, '');
+      const compound = letters.split('').reduce((s, ch) => s + (CHALDEAN[ch] || 0), 0);
+      const out = { letters, compound, root: reduceDigit(compound), mulank: null, bhagyank: null };
+      const parts = String(dob || '').split('-');
+      if (parts.length === 3 && Number(parts[2]) > 0) {
+        out.mulank = reduceDigit(Number(parts[2]));
+        out.bhagyank = reduceDigit(String(dob).replace(/\D/g, '').split('').reduce((a, b) => a + Number(b), 0));
+      }
+      return out;
+    }
+
+
+    function computeEMA(prices, period) {
+      if (prices.length < period || period < 1) return null;
+      const k = 2 / (period + 1);
+      let ema = prices.slice(0, period).reduce((a, b) => a + b, 0) / period;
+      for (let i = period; i < prices.length; i++) {
+        ema = prices[i] * k + ema * (1 - k);
+      }
+      return ema;
+    }
+
+
+
+
+    function computeSeriesEMA(prices, period) {
+      if (prices.length < period || period < 1) return [];
+      const k = 2 / (period + 1);
+      let ema = prices.slice(0, period).reduce((a, b) => a + b, 0) / period;
+      const out = [{ idx: period - 1, val: ema }];
+      for (let i = period; i < prices.length; i++) {
+        ema = prices[i] * k + ema * (1 - k);
+        out.push({ idx: i, val: ema });
+      }
+      return out;
+    }
+
+
+
+
+    function computeRSI14(prices) {
+      if (prices.length < 15) return null;
+      let gains = 0, losses = 0;
+      for (let i = 1; i <= 14; i++) {
+        const d = prices[i] - prices[i - 1];
+        if (d >= 0) gains += d; else losses -= d;
+      }
+      let avgGain = gains / 14;
+      let avgLoss = losses / 14;
+      for (let i = 15; i < prices.length; i++) {
+        const d = prices[i] - prices[i - 1];
+        avgGain = (avgGain * 13 + (d > 0 ? d : 0)) / 14;
+        avgLoss = (avgLoss * 13 + (d < 0 ? -d : 0)) / 14;
+      }
+      if (avgLoss === 0) return 100;
+      const rs = avgGain / avgLoss;
+      return 100 - (100 / (1 + rs));
+    }
+
+
+
+
+    function computeMACD(prices) {
+      // MACD(12,26,9) needs 26 prices for first slow EMA + 8 more prices for 9-period signal EMA = 34 prices
+      if (prices.length < 34) return null;
+      const ema12Map = {};
+      computeSeriesEMA(prices, 12).forEach(x => { ema12Map[x.idx] = x.val; });
+      const ema26List = computeSeriesEMA(prices, 26);
+      const macdSeries = ema26List.map(x => ema12Map[x.idx] - x.val);
+      const sigList = computeSeriesEMA(macdSeries, 9);
+      const lastMacd = macdSeries[macdSeries.length - 1];
+      const lastSig = sigList[sigList.length - 1].val;
+      return { macd: lastMacd, signal: lastSig, hist: lastMacd - lastSig };
+    }
+
+
+
+
+    function computeApp() {
+      const id = currentApp.id;
+      let html = '';
+
+
+
+
+      if (id === 'script') {
+        const topic = esc(val(0).trim() || 'AI productivity workflow');
+        const tone = esc(val(1));
+        const model = esc(val(2));
+        html = `
+          <div class="space-y-3 text-sm">
+            <div class="p-3.5 bg-white/5 border-l-4 border-blue-500">
+              <strong class="text-blue-300 block text-xs">Scene 1 (0–5s) · Opening Hook (${tone})</strong>
+              <p class="mt-1 text-gray-200">"Bhai, agar aap abhi bhi <strong>${topic}</strong> ko purane manual tarike se kar rahe ho, toh yeh 30-second breakdown aapka ghanton ka kaam bacha dega."</p>
+            </div>
+            <div class="p-3.5 bg-white/5 border-l-4 border-blue-500">
+              <strong class="text-blue-300 block text-xs">Scene 2 (5–45s) · Core Walkthrough</strong>
+              <p class="mt-1 text-gray-200">"Step 1: Problem ko clearly define karo. Step 2: Structured prompt aur repeatable template lagao. Step 3: Output ko verify karke seedha publish karo."</p>
+            </div>
+            <div class="p-3.5 bg-black/60 border border-white/10 text-xs text-emerald-300">
+              [${model} Prompt]: Cinematic 4K medium shot of an Indian creator explaining ${topic} in a modern dark studio, subtle rim lighting, shallow depth of field, 35mm lens.
+            </div>
+          </div>`;
+      }
+      else if (id === 'stock') {
+        const label = esc(val(0).trim() || 'CUSTOM SERIES');
+        const rawTokens = val(1).split(/[\s,]+/).filter(Boolean);
+        const prices = rawTokens.map(Number).filter(n => Number.isFinite(n) && n > 0);
+        const smaP = Math.round(num(2));
+        const emaP = Math.round(num(3));
+
+
+
+
+        if (prices.length === 0 || !Number.isFinite(smaP) || smaP < 1 || !Number.isFinite(emaP) || emaP < 1) {
+          html = `<div class="p-4 bg-rose-500/15 border border-rose-500/30 text-sm text-rose-200">Please enter valid comma-separated positive closing prices and positive integer periods for SMA and EMA.</div>`;
+        } else {
+          const lastPrice = prices[prices.length - 1];
+          const smaVal = prices.length >= smaP ? (prices.slice(-smaP).reduce((a,b)=>a+b,0) / smaP) : null;
+          const emaVal = computeEMA(prices, emaP);
+          const rsiVal = computeRSI14(prices);
+          const macdVal = computeMACD(prices);
+
+
+
+
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 bg-blue-500/10 border border-blue-500/30 flex flex-wrap justify-between items-center gap-2">
+                <div>
+                  <span class="text-xs text-blue-300 font-bold">${label} · ${prices.length} Closing Prices Parsed</span>
+                  <h4 class="text-xl font-bold text-white">Latest Close: ${lastPrice.toFixed(2)}</h4>
+                </div>
+                <span class="text-xs px-2.5 py-1 bg-white/10 text-gray-200">Min: ${Math.min(...prices).toFixed(2)} | Max: ${Math.max(...prices).toFixed(2)}</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="p-3.5 bg-white/5 border border-white/10">
+                  <span class="text-xs text-gray-400 block">SMA(${smaP})</span>
+                  ${smaVal !== null
+                    ? `<strong class="text-base text-white">${smaVal.toFixed(2)}</strong> <span class="text-xs ${lastPrice>=smaVal?'text-emerald-400':'text-rose-400'}">(${lastPrice>=smaVal?'Close ≥ SMA':'Close < SMA'})</span>`
+                    : `<span class="text-xs text-amber-300">Insufficient data: needs at least ${smaP} prices (you entered ${prices.length}).</span>`}
+                </div>
+                <div class="p-3.5 bg-white/5 border border-white/10">
+                  <span class="text-xs text-gray-400 block">EMA(${emaP})</span>
+                  ${emaVal !== null
+                    ? `<strong class="text-base text-white">${emaVal.toFixed(2)}</strong> <span class="text-xs ${lastPrice>=emaVal?'text-emerald-400':'text-rose-400'}">(${lastPrice>=emaVal?'Close ≥ EMA':'Close < EMA'})</span>`
+                    : `<span class="text-xs text-amber-300">Insufficient data: needs at least ${emaP} prices (you entered ${prices.length}).</span>`}
+                </div>
+                <div class="p-3.5 bg-white/5 border border-white/10">
+                  <span class="text-xs text-gray-400 block">Wilder RSI(14)</span>
+                  ${rsiVal !== null
+                    ? `<strong class="text-base text-emerald-300">${rsiVal.toFixed(2)}</strong> <span class="text-xs text-gray-300">(${rsiVal>70?'Overbought >70':rsiVal<30?'Oversold <30':'Neutral 30–70'})</span>`
+                    : `<span class="text-xs text-amber-300">Insufficient data: RSI(14) requires at least 15 closing prices (you entered ${prices.length}).</span>`}
+                </div>
+                <div class="p-3.5 bg-white/5 border border-white/10">
+                  <span class="text-xs text-gray-400 block">MACD(12, 26, 9)</span>
+                  ${macdVal !== null
+                    ? `<strong class="text-xs text-white block">MACD: ${macdVal.macd.toFixed(2)} | Sig: ${macdVal.signal.toFixed(2)}</strong><span class="text-xs ${macdVal.hist>=0?'text-emerald-400':'text-rose-400'}">Histogram: ${macdVal.hist.toFixed(2)}</span>`
+                    : `<span class="text-xs text-amber-300">Insufficient data: MACD(12,26,9) requires at least 34 closing prices (you entered ${prices.length}).</span>`}
+                </div>
+              </div>
+              <p class="text-xs text-gray-400">Computed from your entered prices · Educational demo</p>
+            </div>`;
+        }
+      }
+      else if (id === 'ank' || id === 'brand-num') {
+        const n = numerologyOf(val(0).trim(), id === 'ank' ? val(1) : '');
+        if (!n.letters) {
+          html = val(0).trim()
+            ? `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Naam English letters (A to Z) mein likhein.</div>`
+            : `<div class="p-4 bg-white/5 text-sm text-gray-200 rounded-xl">${id === 'ank' ? 'Apna naam likhein (Date of Birth optional hai). Result yahin turant dikhega.' : 'Channel ya brand ka naam likhein. Result yahin turant dikhega.'}</div>`;
+        } else {
+          const ASSOC = {
+            1:'Sun (Surya): Leadership, initiative & independent identity',
+            2:'Moon (Chandra): Diplomacy, creativity & collaboration',
+            3:'Jupiter (Guru): Knowledge, teaching & structured growth',
+            4:'Rahu: Systems thinking, unconventional tech & discipline',
+            5:'Mercury (Budh): Communication, commerce & adaptability',
+            6:'Venus (Shukra): Design, media, hospitality & harmony',
+            7:'Ketu: Research, analytical depth & introspection',
+            8:'Saturn (Shani): Long-term execution, governance & scale',
+            9:'Mars (Mangal): High energy, courage & decisive action'
+          };
+          const dobHtml = n.mulank !== null ? `
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 bg-white/5 text-center"><span class="text-xs text-gray-300 block">Mulank (Birth Day Root)</span><strong class="text-2xl text-emerald-300">${n.mulank}</strong></div>
+              <div class="p-3 bg-white/5 text-center"><span class="text-xs text-gray-300 block">Bhagyank (Full DOB Root)</span><strong class="text-2xl text-blue-300">${n.bhagyank}</strong></div>
+            </div>` : '';
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="p-4 bg-amber-500/10 border border-amber-500/30"><span class="text-xs text-gray-300 block">Chaldean Compound</span><strong class="text-3xl text-amber-300">${n.compound}</strong></div>
+                <div class="p-4 bg-blue-500/10 border border-blue-500/30"><span class="text-xs text-gray-300 block">Name Root Number</span><strong class="text-3xl text-blue-300">${n.root}</strong></div>
+              </div>
+              ${dobHtml}
+              <div class="p-3.5 bg-white/5 text-sm text-gray-200">
+                <strong>Traditional Association (Root ${n.root}):</strong> ${ASSOC[n.root] || 'Root 0 has no traditional association. Add letters to the name.'}
+              </div>
+              <p class="text-xs text-gray-300">Traditional Chaldean numerology calculation for cultural and entertainment reference.</p>
+            </div>`;
+        }
+      }
+      else if (id === 'rashi') {
+        const rashiData = {
+          '1. Mesh (Aries)': { grah:'Mars (Mangal)', tatva:'Agni (Fire)', traits:'Action-oriented, pioneering, direct communicator, thrives in fast-paced challenges.' },
+          '2. Vrishabha (Taurus)': { grah:'Venus (Shukra)', tatva:'Prithvi (Earth)', traits:'Grounded, patient resource builder, values stability, aesthetics, and consistent compounding.' },
+          '3. Mithun (Gemini)': { grah:'Mercury (Budh)', tatva:'Vayu (Air)', traits:'Versatile communicator, curious researcher, quick adapter across writing, media, and tech.' },
+          '4. Karka (Cancer)': { grah:'Moon (Chandra)', tatva:'Jal (Water)', traits:'Intuitive, protective, strong emotional intelligence and memory, community-focused.' },
+          '5. Simha (Leo)': { grah:'Sun (Surya)', tatva:'Agni (Fire)', traits:'Expressive leader, confident stage presence, natural organizer with strong personal conviction.' },
+          '6. Kanya (Virgo)': { grah:'Mercury (Budh)', tatva:'Prithvi (Earth)', traits:'Detail-focused analyst, systematic problem solver, excels in auditing, data, and operations.' },
+          '7. Tula (Libra)': { grah:'Venus (Shukra)', tatva:'Vayu (Air)', traits:'Balanced negotiator, relationship builder, strong sense of fairness, design, and strategy.' },
+          '8. Vrishchika (Scorpio)': { grah:'Mars (Mangal)', tatva:'Jal (Water)', traits:'Intense researcher, resilient strategist, focused on deep root-cause investigation.' },
+          '9. Dhanu (Sagittarius)': { grah:'Jupiter (Guru)', tatva:'Agni (Fire)', traits:'Big-picture philosopher, mentor, loves travel, higher learning, and expansive goals.' },
+          '10. Makar (Capricorn)': { grah:'Saturn (Shani)', tatva:'Prithvi (Earth)', traits:'Disciplined builder, long-term planner, structured administrator with high endurance.' },
+          '11. Kumbha (Aquarius)': { grah:'Saturn (Shani)', tatva:'Vayu (Air)', traits:'Independent innovator, systems thinker, drawn to networks, science, and future tech.' },
+          '12. Meen (Pisces)': { grah:'Jupiter (Guru)', tatva:'Jal (Water)', traits:'Imaginative storyteller, empathetic listener, strong artistic and reflective sensibility.' }
+        };
+        const sel = val(0);
+        const info = rashiData[sel] || rashiData['1. Mesh (Aries)'];
+        let westernSign = 'Enter a valid birth date to check date-based Western Sun Sign.';
+        if (val(1)) {
+          const [, mStr, dStr] = val(1).split('-');
+          const m = Number(mStr), d = Number(dStr);
+          if (m && d) {
+            if ((m===3&&d>=21)||(m===4&&d<=19)) westernSign = 'Aries (Mar 21 – Apr 19)';
+            else if ((m===4&&d>=20)||(m===5&&d<=20)) westernSign = 'Taurus (Apr 20 – May 20)';
+            else if ((m===5&&d>=21)||(m===6&&d<=20)) westernSign = 'Gemini (May 21 – Jun 20)';
+            else if ((m===6&&d>=21)||(m===7&&d<=22)) westernSign = 'Cancer (Jun 21 – Jul 22)';
+            else if ((m===7&&d>=23)||(m===8&&d<=22)) westernSign = 'Leo (Jul 23 – Aug 22)';
+            else if ((m===8&&d>=23)||(m===9&&d<=22)) westernSign = 'Virgo (Aug 23 – Sep 22)';
+            else if ((m===9&&d>=23)||(m===10&&d<=22)) westernSign = 'Libra (Sep 23 – Oct 22)';
+            else if ((m===10&&d>=23)||(m===11&&d<=21)) westernSign = 'Scorpio (Oct 23 – Nov 21)';
+            else if ((m===11&&d>=22)||(m===12&&d<=21)) westernSign = 'Sagittarius (Nov 22 – Dec 21)';
+            else if ((m===12&&d>=22)||(m===1&&d<=19)) westernSign = 'Capricorn (Dec 22 – Jan 19)';
+            else if ((m===1&&d>=20)||(m===2&&d<=18)) westernSign = 'Aquarius (Jan 20 – Feb 18)';
+            else westernSign = 'Pisces (Feb 19 – Mar 20)';
+          }
+        }
+        html = `
+          <div class="space-y-3 text-sm">
+            <div class="p-4 bg-amber-500/10 border border-amber-500/30">
+              <span class="text-xs text-amber-300 font-bold">TRADITIONAL RASHI REFERENCE</span>
+              <h4 class="text-xl font-bold text-white mt-0.5">${esc(sel)}</h4>
+              <p class="text-xs text-gray-300 mt-2"><strong>Swami Grah (Ruler):</strong> ${info.grah} · <strong>Tatva (Element):</strong> ${info.tatva}</p>
+              <p class="text-xs text-gray-200 mt-1.5">${info.traits}</p>
+            </div>
+            <div class="p-3.5 bg-white/5 border border-white/10">
+              <span class="text-xs text-blue-300 font-bold block">Date-Based Western Sun Sign (from DOB input):</span>
+              <strong class="text-sm text-white">${westernSign}</strong>
+              <p class="text-xs text-gray-400 mt-1">Note: A birth date alone only determines the Western Sun Sign. Vedic Janma Rashi (Moon sign) and Lagna (Ascendant) require exact birth time, birthplace coordinates, and ephemeris calculations.</p>
+            </div>
+          </div>`;
+      }
+      else if (id === 'sip') {
+        let monthly = num(0), stepPct = num(1), rate = num(2), yrs = Math.round(num(3));
+        if (!(monthly > 0) || stepPct < 0 || stepPct > 100 || !(rate >= 0 && rate <= 50) || !(yrs >= 1 && yrs <= 60)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Please enter a positive Monthly SIP, Step-Up between 0–100%, Return between 0–50%, and Duration between 1–60 years.</div>`;
+        } else {
+          let inv = 0, corp = 0, flatInv = 0, flatCorp = 0;
+          const mRate = rate / 100 / 12;
+          const baseSip = monthly;
+          for (let y = 1; y <= yrs; y++) {
+            for (let m = 1; m <= 12; m++) {
+              inv += monthly;
+              corp = (corp + monthly) * (1 + mRate);
+              flatInv += baseSip;
+              flatCorp = (flatCorp + baseSip) * (1 + mRate);
+            }
+            monthly *= (1 + stepPct / 100);
+          }
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div class="p-3 bg-white/5"><span class="text-xs text-gray-400 block">Step-Up Contributions</span><strong class="text-sm text-white">${inr(inv)}</strong></div>
+                <div class="p-3 bg-white/5"><span class="text-xs text-gray-400 block">Assumed Gains (${rate}%)</span><strong class="text-sm text-emerald-400">${inr(corp - inv)}</strong></div>
+                <div class="p-3 bg-emerald-500/15 border border-emerald-500/30"><span class="text-xs text-emerald-300 block">Step-Up Projected Value</span><strong class="text-base text-white">${inr(corp)}</strong></div>
+              </div>
+              <div class="p-3 bg-white/5 text-xs text-gray-300 flex justify-between">
+                <span>Flat SIP (${inr(baseSip)}/mo without step-up):</span>
+                <strong>${inr(flatCorp)} (Invested: ${inr(flatInv)})</strong>
+              </div>
+            </div>`;
+        }
+      }
+      else if (id === 'trade') {
+        const cap = num(0), riskPct = num(1), entry = num(2), sl = num(3);
+        if (!(cap > 0) || !(riskPct > 0 && riskPct <= 20) || !(entry > 0) || !(sl > 0) || entry === sl) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Enter positive Capital, Risk % (0.1–20%), and distinct positive Entry and Stop-Loss prices.</div>`;
+        } else {
+          const riskRs = cap * (riskPct / 100);
+          const diff = Math.abs(entry - sl);
+          const qty = Math.floor(riskRs / diff);
+          const isLong = entry > sl;
+          const t2 = isLong ? entry + diff * 2 : entry - diff * 2;
+          const t3 = isLong ? entry + diff * 3 : entry - diff * 3;
+          if (t2 <= 0 || t3 <= 0) {
+            html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">With Entry ₹${entry} and Stop-Loss ₹${sl}, the short-side 1:2/1:3 targets fall below ₹0. Use a stop-loss closer to the entry price.</div>`;
+          } else
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="p-3.5 bg-white/5"><span class="text-xs text-gray-400 block">Max Capital at Risk (${riskPct}%)</span><strong class="text-lg text-rose-400">${inr(riskRs)}</strong></div>
+                <div class="p-3.5 bg-blue-500/15 border border-blue-500/30"><span class="text-xs text-blue-300 block">Position Size (${isLong?'LONG':'SHORT'})</span><strong class="text-lg text-white">${qty} Shares</strong></div>
+                <div class="p-3.5 bg-white/5"><span class="text-xs text-gray-400 block">1:2 Risk-Reward Target</span><strong class="text-lg text-emerald-400">₹${t2.toFixed(2)}</strong></div>
+                <div class="p-3.5 bg-white/5"><span class="text-xs text-gray-400 block">1:3 Risk-Reward Target</span><strong class="text-lg text-emerald-300">₹${t3.toFixed(2)}</strong></div>
+              </div>
+              <p class="text-xs text-gray-300">Capital needed for this position: ${inr(qty * entry)}.${qty * entry > cap ? ' <strong class="text-amber-300">This is more than your capital of ' + inr(cap) + ', so it needs margin or a tighter stop-loss.</strong>' : ''}${qty === 0 ? ' <strong class="text-amber-300">Quantity is 0: the risk amount is smaller than the loss on one share. Raise risk % or tighten the stop-loss.</strong>' : ''}</p>
+            </div>`;
+        }
+      }
+      else if (id === 'loan-hack') {
+        const P = num(0), loanR = num(1), yrs = Math.round(num(2)), sipPct = num(3), sipAnnualR = num(4);
+        if (!(P > 0) || !(loanR > 0 && loanR <= 40) || !(yrs >= 1 && yrs <= 40) || !(sipPct >= 0 && sipPct <= 200) || !(sipAnnualR >= 0 && sipAnnualR <= 35)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Please enter valid positive loan details, SIP percentage (0–200%), and assumed return rate (0–35%).</div>`;
+        } else {
+          const r = loanR / 12 / 100, n = yrs * 12;
+          const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+          const totLoanInterest = (emi * n) - P;
+          const monthlySip = emi * (sipPct / 100);
+          const sr = sipAnnualR / 12 / 100;
+          const sipContributions = monthlySip * n;
+          const sipCorpus = sr > 0 ? monthlySip * ((Math.pow(1 + sr, n) - 1) / sr) * (1 + sr) : sipContributions;
+          const sipAssumedGains = sipCorpus - sipContributions;
+          html = `
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 bg-white/5"><span class="text-xs text-gray-400 block">Monthly Loan EMI</span><strong class="text-base text-white">${inr(emi)}</strong></div>
+                <div class="p-3 bg-rose-500/10 border border-rose-500/20"><span class="text-xs text-rose-300 block">Total Loan Interest Payable</span><strong class="text-base text-rose-400">${inr(totLoanInterest)}</strong></div>
+              </div>
+              <div class="p-3.5 bg-blue-500/10 border border-blue-500/30 space-y-1.5">
+                <strong class="text-blue-300 block">Companion SIP Breakdown (${inr(monthlySip)}/mo @ ${sipAnnualR}% p.a. assumed):</strong>
+                <div class="flex justify-between"><span>Your Own SIP Contributions (${n} months):</span><strong class="text-white">${inr(sipContributions)}</strong></div>
+                <div class="flex justify-between"><span>Assumed Market Compounding Gains:</span><strong class="text-emerald-400">${inr(sipAssumedGains)}</strong></div>
+                <div class="flex justify-between pt-2 font-semibold"><span>Projected Total SIP Value (Contributions + Assumed Gains):</span><strong class="text-white">${inr(sipCorpus)}</strong></div>
+              </div>
+            </div>`;
+        }
+      }
+      else if (id === 'fire') {
+        const exp = num(0), curAge = num(1), retAge = num(2), infl = num(3);
+        const yrs = retAge - curAge;
+        if (!(exp > 0) || !(yrs >= 1 && yrs <= 60) || !(infl >= 0 && infl <= 20)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Ensure Monthly Expense > 0, Target Retirement Age > Current Age (1–60 yrs horizon), and Inflation between 0–20%.</div>`;
+        } else {
+          const futMonthly = exp * Math.pow(1 + infl / 100, yrs);
+          const fireCorpus = futMonthly * 12 * 25;
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-4 bg-blue-500/15 border border-blue-500/30">
+                <span class="text-xs text-blue-300 block">ESTIMATED 25x RETIREMENT CORPUS (IN ${yrs} YEARS)</span>
+                <strong class="text-3xl font-display text-white">${inr(fireCorpus)}</strong>
+              </div>
+              <p class="text-xs text-gray-300">At ${infl}% annual inflation, your current ${inr(exp)}/month lifestyle equals <strong>${inr(futMonthly)}/month</strong> at age ${retAge}. Assumption-based estimate.</p>
+            </div>`;
+        }
+      }
+      else if (id === 'mf-leak') {
+        const sip = num(0), yrs = Math.round(num(1)), dirR = num(2), regR = num(3);
+        if (!(sip > 0) || !(yrs >= 1 && yrs <= 50) || !(dirR >= 0 && dirR <= 40) || !(regR >= 0 && regR <= 40)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Enter positive Monthly SIP, Horizon (1–50 years), and valid return assumptions (0–40%).</div>`;
+        } else {
+          const n = yrs * 12, dr = dirR / 12 / 100, rr = regR / 12 / 100;
+          const dirCorp = dr > 0 ? sip * ((Math.pow(1 + dr, n) - 1) / dr) * (1 + dr) : sip * n;
+          const regCorp = rr > 0 ? sip * ((Math.pow(1 + rr, n) - 1) / rr) * (1 + rr) : sip * n;
+          const diff = dirCorp - regCorp;
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 bg-rose-500/15 border border-rose-500/30">
+                <span class="text-xs text-rose-300 block">ASSUMPTION-BASED DIFFERENCE OVER ${yrs} YEARS</span>
+                <strong class="text-2xl text-white">${inr(Math.abs(diff))} ${diff >= 0 ? 'higher in Direct Plan' : 'higher in Regular Plan'}</strong>
+              </div>
+              <div class="grid grid-cols-2 gap-3 text-xs">
+                <div class="p-3 bg-white/5"><span class="text-gray-400 block">Direct @ ${dirR}% p.a. (Assumed)</span><strong class="text-base text-emerald-400">${inr(dirCorp)}</strong></div>
+                <div class="p-3 bg-white/5"><span class="text-gray-400 block">Regular @ ${regR}% p.a. (Assumed)</span><strong class="text-base text-white">${inr(regCorp)}</strong></div>
+              </div>
+              <p class="text-xs text-gray-400">Assumption-based estimate derived from your entered return rates. Total principal invested: ${inr(sip * n)}.</p>
+            </div>`;
+        }
+      }
+      else if (id === 'comedy') {
+        const topic = esc(val(0).trim() || 'everyday life');
+        const fmt = esc(val(1));
+        html = `
+          <div class="space-y-2.5 text-xs sm:text-sm">
+            <div class="p-3 bg-white/5"><strong class="text-blue-300 block">1. Premise & Setup (${fmt}):</strong>"Bhai, <em>${topic}</em> mein sabse kamaal ki baat yeh hai ki hum log planning toh mission control jaisi karte hain, par aakhiri minute par sab jugaad bharose chalta hai..."</div>
+            <div class="p-3 bg-white/5"><strong class="text-blue-300 block">2. Observational Punchline Angle:</strong>"Aur har group mein ek banda aisa zaroor hota hai jo bina kuch kiye sabse zyada expert advice deta hai regarding <em>${topic}</em>!"</div>
+            <div class="p-3 bg-white/5"><strong class="text-emerald-300 block">3. Audience Crowd-Work Hook:</strong>"Sach batana, aap mein se kitne logon ne pichle mahine <em>${topic}</em> mein bilkul yahi situation face ki hai?"</div>
+          </div>`;
+      }
+      else if (id === 'yt-calc') {
+        const views = num(0), rpm = num(1);
+        if (!(views >= 0) || !(rpm >= 0)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Enter non-negative Views and Assumed RPM.</div>`;
+        } else {
+          const adsense = (views / 1000) * rpm;
+          const brandLow = adsense * 2.5, brandHigh = adsense * 4.5;
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3.5 bg-white/5"><span class="text-xs text-gray-400 block">Assumed AdSense / Video</span><strong class="text-xl text-emerald-400">${inr(adsense)}</strong></div>
+                <div class="p-3.5 bg-blue-500/15 border border-blue-500/30"><span class="text-xs text-blue-300 block">Est. Sponsorship Range</span><strong class="text-base text-white">${inr(brandLow)} – ${inr(brandHigh)}</strong></div>
+              </div>
+              <p class="text-xs text-gray-400">Heuristic creator estimate based on your entered views and RPM assumption.</p>
+            </div>`;
+        }
+      }
+      else if (id === 'podcast') {
+        const guest = esc(val(0).trim() || 'Industry Guest');
+        const vibe = esc(val(1));
+        html = `
+          <div class="space-y-2.5 text-xs sm:text-sm">
+            <div class="p-3 bg-white/5"><strong class="text-blue-300 block">1. Ice-Breaker (${vibe}):</strong>"Jab aapne <em>${guest}</em> ke taur par shuruat ki, toh sabse pehla myth aapka kya toota?"</div>
+            <div class="p-3 bg-white/5"><strong class="text-blue-300 block">2. Deep Process Question:</strong>"Aapke kaam mein wo kaunsa behind-the-scenes decision tha jisne aapka career trajectory badal diya?"</div>
+            <div class="p-3 bg-white/5"><strong class="text-emerald-300 block">3. Rapid-Fire Closing:</strong>"Agar aaj kisi beginner ko aapke domain mein pehle 30 din ka roadmap dena ho, toh top 3 steps kya honge?"</div>
+          </div>`;
+      }
+      else if (id === 'ctr') {
+        const raw = val(0).trim();
+        if (!raw) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Please enter a video title to evaluate.</div>`;
+        } else {
+          let score = 30;
+          const tips = [];
+          const len = raw.length;
+          if (len >= 42 && len <= 68) { score += 22; }
+          else if (len >= 28 && len <= 80) { score += 12; tips.push('Aim for 42–68 characters so the title does not truncate on mobile.'); }
+          else { tips.push('Title length (' + len + ' chars) is outside the ideal 42–68 character sweet spot.'); }
+
+
+
+
+          if (/\d/.test(raw)) { score += 16; } else { tips.push('Add a specific number, year, or timeframe (e.g., "5 Steps", "2026", "10 Mins").'); }
+          if (/[\[\(\{].+?[\]\)\}]/.test(raw)) { score += 12; } else { tips.push('Add a bracketed clarifier at the end (e.g., "[Complete Guide]" or "(Hindi)").'); }
+          if (/\?|^(how|why|what|kaise|kya|kyun)\b/i.test(raw)) { score += 10; } else { tips.push('Consider framing with a "How/Why/Kaise" hook or curiosity question.'); }
+          if (/\b(guide|plan|step|secret|mistake|truth|proven|complete|real|smart|vs)\b/i.test(raw)) { score += 10; } else { tips.push('Include a concrete outcome or action word (e.g., Plan, Mistake, Guide, vs).'); }
+
+
+
+
+          score = Math.min(100, score);
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 bg-blue-500/15 border border-blue-500/30 flex justify-between items-center">
+                <div>
+                  <span class="text-xs text-blue-300 font-bold block">HEURISTIC TITLE STRENGTH SCORE</span>
+                  <span class="text-xs text-gray-400">Length: ${len} characters</span>
+                </div>
+                <strong class="text-3xl font-display text-white">${score} / 100</strong>
+              </div>
+              <div class="p-3 bg-white/5 text-xs space-y-1">
+                <strong class="text-gray-200 block">Improvement Checklist:</strong>
+                ${tips.length ? tips.map(t=>`<p class="text-amber-300">• ${esc(t)}</p>`).join('') : `<p class="text-emerald-400">Great job! Your title hits length, number, bracket, and hook criteria.</p>`}
+              </div>
+              <p class="text-xs text-gray-400">Heuristic checklist - not a measured or predicted CTR.</p>
+            </div>`;
+        }
+      }
+      else if (id === 'persona') {
+        const prompt = `Ultra-realistic portrait in a ${val(0)} setting, wearing ${val(1)}, captured with ${val(2)}. STRICT IDENTITY LOCK: Preserve 100% original facial identity, exact face shape, eyes, nose, lips, jawline, beard/moustache silhouette, and natural skin tone. Apply only non-destructive cinematic lighting and background color grading without face morphing.`;
+        html = `
+          <div class="space-y-2 text-xs">
+            <span class="text-blue-300 font-bold">Copy-Ready Identity-Locked Prompt</span>
+            <textarea id="out-text" rows="6" readonly class="w-full border border-white/30 p-3 text-gray-200" aria-label="Generated prompt">${esc(prompt)}</textarea><button onclick="copyFrom('out-text', this)" class="bg-white/10 hover:bg-white/20 px-5 text-sm text-white">Copy prompt</button>
+          </div>`;
+      }
+      else if (id === 'compat') {
+        const n1 = val(0).trim(), n2 = val(1).trim(), el = val(2);
+        if (!n1 || !n2) {
+          html = `<div class="p-4 bg-white/5 text-sm text-gray-200 rounded-xl">Dono naam likhein. Match score yahin dikhega.</div>`;
+        } else {
+          const codeSum = (s) => s.toUpperCase().replace(/[^A-Z]/g,'').split('').reduce((a,c,i)=>a + c.charCodeAt(0)*(i+1), 0);
+          const elBonus = el.includes('Fire + Air') ? 11 : el.includes('Earth + Water') ? 9 : el.includes('Fire + Fire') ? 7 : 5;
+          const rawScore = 60 + ((codeSum(n1) + codeSum(n2) + elBonus) % 36);
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-4 bg-blue-500/15 border border-blue-500/30 flex justify-between items-center">
+                <div>
+                  <span class="text-xs text-blue-300 font-bold block">${esc(n1)} &amp; ${esc(n2)}</span>
+                  <span class="text-xs text-gray-300">${esc(el)}</span>
+                </div>
+                <strong class="text-3xl font-display text-white">${rawScore}%</strong>
+              </div>
+              <p class="text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 p-2.5">
+                Entertainment only - not a real compatibility assessment.
+              </p>
+            </div>`;
+        }
+      }
+      else if (id === 'travel') {
+        const dest = val(0), days = Math.round(num(1));
+        const style = val(2);
+        if (!(days >= 1 && days <= 30)) {
+          html = `<div class="p-4 bg-rose-500/15 text-sm text-rose-200">Please enter trip duration between 1 and 30 days.</div>`;
+        } else {
+          const perDay = style.includes('2,200') ? 2200 : style.includes('3,800') ? 3800 : 6500;
+          const total = days * perDay;
+          const spots = {
+            'Darjeeling & Kurseong Hills': 'Tiger Hill sunrise, Batasia Loop toy train, Kurseong Eagle\'s Crag & misty tea estates.',
+            'Varanasi & Ayodhya': 'Dashashwamedh Ghat Aarti, Assi Ghat morning boat ride, Kashi Vishwanath corridor & Ram Mandir.',
+            'Goa Coastal Circuit': 'Fontainhas Latin Quarter, Aguada Fort golden hour, South Goa Palolem & cafe trail.',
+            'Manali & Solang Valley': 'Old Manali cafes, Hadimba Temple cedar forest, Atal Tunnel & Solang snow viewpoints.'
+          };
+          html = `
+            <div class="space-y-3 text-sm">
+              <div class="p-4 bg-emerald-500/15 border border-emerald-500/30">
+                <span class="text-xs text-emerald-300 block">ESTIMATED PER-PERSON BUDGET (${days} DAYS)</span>
+                <strong class="text-2xl text-white">${inr(total)}</strong>
+                <span class="text-xs text-gray-300 block mt-1">Stay (45%): ${inr(total*0.45)} · Food & Local Transit (35%): ${inr(total*0.35)} · Buffer (20%): ${inr(total*0.2)}</span>
+              </div>
+              <div class="p-3 bg-white/5 text-xs text-gray-200">
+                <strong>Key Vlog & Photography Spots:</strong> ${spots[dest] || ''}
+              </div>
+            </div>`;
+        }
+      }
+      else if (id === 'chess') {
+        const chessRef = {
+          '1. Queen\'s Gambit (1.d4 d5 2.c4)': {
+            moves: '1.d4 d5 2.c4 (Accepted: 2...dxc4 | Declined: 2...e6)',
+            plan: 'White challenges Black\'s d5 pawn immediately to gain central control (e4/d4) and open lines for the c1-bishop and queen.',
+            trap: 'Elephant Trap in QGD (after 1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Nbd7 5.cxd5 exd5 6.Nxd5?! Nxd5! 7.Bxd8 Bb4+ winning decisive material).'
+          },
+          '2. Sicilian Defense · Najdorf/Open (1.e4 c5)': {
+            moves: '1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6',
+            plan: 'Asymmetrical battle: Black trades the c-pawn for White\'s central d-pawn, obtaining a semi-open c-file and queenside counterplay while White attacks on the kingside.',
+            trap: 'Poisoned Pawn & e6-sacrifice traps, if Black delays development too long grabbing pawns, White sacrifices on d5 or e6 to expose the uncastled king.'
+          },
+          '3. London System (1.d4 & 2.Bf4)': {
+            moves: '1.d4 d5 2.Bf4 Nf6 3.e3 c5 4.c3 Nc6 5.Nd2',
+            plan: 'Solid pyramid pawn structure (c3-d4-e3) developing the dark-squared bishop outside the pawn chain before playing e3, aiming for a strong Ne5 outpost.',
+            trap: 'Early ...Qb6 by Black attacking b2 while d4 is also under pressure, White must be ready with Qb3 or Qc1 instead of autopilot moves.'
+          },
+          '4. Italian Game / Giuoco Piano (1.e4 e5 2.Nf3 Nc6 3.Bc4)': {
+            moves: '1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d3 (or 5.d4)',
+            plan: 'Rapid kingside development targeting the f7 square, followed by building a central pawn duo with c3 and d4.',
+            trap: 'Legal\'s Trap: 1.e4 e5 2.Nf3 Nc6 3.Bc4 d6 4.Nc3 Bg4 5.h3 Bh5? 6.Nxe5! Bxd1?? 7.Bxf7+ Ke7 8.Nd5# is mate. If Black plays 3...Nf6 instead (Two Knights Defence), 4.Ng5 d5 5.exd5 Nxd5?! 6.Nxf7 is the Fried Liver Attack.'
+          },
+          '5. Caro-Kann Defense (1.e4 c6)': {
+            moves: '1.e4 c6 2.d4 d5 (Advance: 3.e5 Bf5 | Classical: 3.Nc3 dxe4 4.Nxe4 Bf5)',
+            plan: 'Extremely resilient structure: Black supports d5 with c6 while keeping the c8-diagonal open so the light-squared bishop is not locked in.',
+            trap: 'Smyslov Trap: 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Nd7 5.Qe2 Ngf6?? 6.Nd6# is mate. Against the Advance (3.e5), Black\'s usual plan is ...Bf5 and ...e6.'
+          },
+          '6. King\'s Indian Defense (1.d4 Nf6 2.c4 g6)': {
+            moves: '1.d4 Nf6 2.c4 g6 3.Nc3 Bg7 4.e4 d6 5.Nf3 O-O 6.Be2 e5',
+            plan: 'Hypermodern counterattack: Black allows White a big pawn center, then strikes back with ...e5 or ...c5 and launches a kingside pawn storm (...f5-f4).',
+            trap: 'Typical pitfall: White ignores the ...f5 pawn storm after d5 and loses the kingside race, or Black delays ...e5 and gets squeezed by d5 and queenside play. Timing decides this opening more than any single trick.'
+          }
+        };
+        const info = chessRef[val(0)] || chessRef['1. Queen\'s Gambit (1.d4 d5 2.c4)'];
+        html = `
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="p-3.5 bg-blue-500/10 border border-blue-500/30">
+              <span class="text-xs text-blue-300 font-bold block">MOVE ORDER</span>
+              <code class="text-white text-sm">${esc(info.moves)}</code>
+            </div>
+            <div class="p-3.5 bg-white/5"><strong class="text-emerald-300 block">Core Strategic Plan:</strong><p class="mt-1 text-gray-200">${esc(info.plan)}</p></div>
+            <div class="p-3.5 bg-rose-500/10 border border-rose-500/20"><strong class="text-rose-300 block">Common pitfall or trap:</strong><p class="mt-1 text-gray-200">${esc(info.trap)}</p></div>
+          </div>`;
+      }
+      else if (id === 'mind') {
+        const cues = {
+          '1. Crossed arms + leaning back': {
+            meaning: 'Often signals emotional distance, skepticism, or physical comfort while evaluating from a distance.',
+            tip: 'Ask an open-ended question or hand them something to look at (a document or demo) to naturally uncross posture and invite participation.'
+          },
+          '2. Steepled fingers + steady eye contact': {
+            meaning: 'High confidence and strong conviction in their current position or expertise.',
+            tip: 'Keep your responses concise, structured, and backed by concrete numbers rather than vague generalizations.'
+          },
+          '3. Touching neck/collarbone while answering': {
+            meaning: 'Classic self-pacifying gesture indicating mild stress, hesitation, or uncertainty about the topic being discussed.',
+            tip: 'Lower the pressure in the room, acknowledge the complexity of the point and offer a clear, low-risk next step.'
+          },
+          '4. Posture mirroring + open palms': {
+            meaning: 'Strong rapport, psychological alignment, and openness to collaboration.',
+            tip: 'Great time to summarize shared goals and propose a concrete decision or timeline.'
+          },
+          '5. Rapid foot tapping / checking watch': {
+            meaning: 'Impatience, time pressure, or a desire to move on from the current detail level.',
+            tip: 'Pause and ask: "Would you like the 30-second bottom line first, or should we dive into the specifics?"'
+          },
+          '6. Head tilted slightly + slow nodding': {
+            meaning: 'Active, empathetic listening and genuine curiosity about your point.',
+            tip: 'Continue at a measured pace and invite their perspective once you finish your thought.'
+          }
+        };
+        const c = cues[val(0)] || cues['1. Crossed arms + leaning back'];
+        html = `
+          <div class="space-y-3 text-sm">
+            <div class="p-3.5 bg-rose-500/10 border border-rose-500/30"><strong class="text-rose-300 block">Interpretation (${esc(val(0))}):</strong><p class="text-xs text-gray-200 mt-1">${esc(c.meaning)}</p></div>
+            <div class="p-3.5 bg-emerald-500/10 border border-emerald-500/25"><strong class="text-emerald-300 block">Practical Conversation Tip:</strong><p class="text-xs text-gray-200 mt-1">${esc(c.tip)}</p></div>
+            <p class="text-xs text-gray-400">Communication reference guide, always consider context and baseline habits.</p>
+          </div>`;
+      }
+      else if (id === 'letter') {
+        const cat = val(0), subj = val(1).trim() || 'the matter mentioned above';
+        const T = {
+          'Official Grievance / Dues Representation': { sal: 'Respected Sir/Madam', body: `I am writing to bring the following matter to your kind attention: ${subj}.\n\nI request you to look into the facts, verify the records on file, and arrange an early resolution. I am ready to provide any supporting document your office may need.\n\nI shall be grateful for a written reply within a reasonable time.` },
+          'Salary Increment & Performance Review Pitch': { sal: 'Dear [Manager Name]', body: `I would like to discuss my compensation in light of my work over the past review period: ${subj}.\n\nDuring this time I have [two or three specific results, with numbers]. Based on these results and my wider responsibilities, I request a revision of my compensation to [target amount or percentage].\n\nI would welcome a short meeting to discuss this at your convenience.` },
+          'Vendor / Client Project Proposal': { sal: 'Dear [Client Name]', body: `Thank you for the opportunity to discuss ${subj}.\n\nI propose the following scope: [deliverables]. Timeline: [start date to delivery date]. Fees: [amount and payment terms]. I will share a short written plan and an update at each milestone.\n\nPlease let me know a suitable time to walk you through the proposal.` }
+        };
+        const t = T[cat] || T['Official Grievance / Dues Representation'];
+        const bodyText = `Subject: ${cat}: ${subj}\n\n${t.sal},\n\n${t.body}\n\nYours sincerely,\n[Your Name]\n[Contact number]`;
+        html = `
+          <div class="space-y-2 text-sm">
+            <label for="out-text" class="text-sm block">Editable draft. Fill the [brackets] before sending.</label>
+            <textarea id="out-text" rows="13" class="w-full border border-white/30 p-3 text-gray-200">${esc(bodyText)}</textarea>
+            <button onclick="copyFrom('out-text', this)" class="bg-white/10 hover:bg-white/20 px-5 text-sm text-white">Copy draft</button>
+          </div>`;
+      }
+
+      document.getElementById('m-output').innerHTML = html;
+    }
+
+
+
+
+
+    // =========================================================================
+    // PART A & PART B · 8 GENUINE WORKING BROWSER GAMES (GLOBAL NAMED FUNCTIONS)
+    // =========================================================================
+    let reflexState = { status:'idle', timer:null, startAt:0, best:null };
+    let candleState = { balance:10000, streak:0, history:[] };
+    let wordState = { idx:0, scrambled:'', score:0, showHint:false };
+    let memoryState = { seq:[], userIdx:0, round:0, best:0, locked:true, timers:[] };
+    let triviaState = { idx:0, score:0, answered:false, choice:-1, timer:null };
+    let typingState = { target:'', startAt:0, timer:null, finished:false };
+    let mathState = { a:12, b:15, op:'×', ans:180, score:0, streak:0 };
+    let tycoonState = { pts:0, perClick:1, autoRate:0, timer:null };
+
+
+
+
+    const WORD_BANK = [
+      { w:'ALGORITHM', h:'Step-by-step computational procedure' },
+      { w:'COMPOUNDING', h:'Earning returns on previous returns' },
+      { w:'LIQUIDITY', h:'Ease of converting an asset into cash' },
+      { w:'VOLATILITY', h:'Statistical measure of price dispersion' },
+      { w:'PORTFOLIO', h:'Collection of financial investments' },
+      { w:'LATENCY', h:'Time delay in a system or network' },
+      { w:'DATABASE', h:'Organized collection of structured data' },
+      { w:'INFLATION', h:'General rise in price levels over time' },
+      { w:'DIVIDEND', h:'Distribution of profits to shareholders' },
+      { w:'PROTOCOL', h:'Standard set of communication rules' },
+      { w:'ENCRYPTION', h:'Encoding data so only authorized parties can read it' },
+      { w:'HEURISTIC', h:'Practical rule-of-thumb problem-solving approach' }
+    ];
+
+
+
+
+    const TRIVIA_BANK = [
+      { q:'Which stock index tracks 50 large-cap companies listed on the National Stock Exchange of India?', o:['SENSEX 30','NIFTY 50','BANKEX','INDIA VIX'], a:1 },
+      { q:'In computing, what does HTTP stand for?', o:['HyperText Transfer Protocol','High Transmission Text Program','Hyperlink Tracking Terminal Process','Host Transfer Timing Protocol'], a:0 },
+      { q:'Under the Rule of 72, approximately how many years does it take to double money at 12% annual compound return?', o:['4 years','6 years','9 years','12 years'], a:1 },
+      { q:'How many minimum closing price points are required to compute the first standard Wilder RSI(14) value?', o:['7 prices','10 prices','15 prices (14 price changes)','50 prices'], a:2 },
+      { q:'Which data structure operates on a Last-In, First-Out (LIFO) principle?', o:['Queue','Stack','Hash Table','Binary Search Tree'], a:1 },
+      { q:'What is the chemical symbol for Gold?', o:['Gd','Ag','Au','Fe'], a:2 },
+      { q:'In mutual funds, what is the primary difference between a Direct Plan and a Regular Plan?', o:['Direct plans have no distributor commission & lower expense ratio','Direct plans invest only in gold','Regular plans guarantee fixed returns','There is no difference'], a:0 },
+      { q:'Which browser API provides high-resolution timestamps in milliseconds for measuring latency?', o:['Math.random()','performance.now()','JSON.stringify()','localStorage.getItem()'], a:1 },
+      { q:'Which planet is known as Mangal in traditional Indian astronomy?', o:['Jupiter','Venus','Mars','Saturn'], a:2 },
+      { q:'If you risk 1% on a ₹2,00,000 account with a ₹10 stop-loss per share, how many shares do you buy?', o:['50 shares','100 shares','200 shares','500 shares'], a:2 }
+    ];
+
+
+
+
+    const TYPING_PROMPTS = [
+      'discipline in position sizing and long term compounding matters far more than predicting the next candle',
+      'clean code and honest math make interactive browser tools reliable fast and genuinely helpful for users',
+      'consistency in building testing and refining products creates compound growth for digital creators'
+    ];
+
+
+
+
+    function cleanupGameTimers() {
+      if (reflexState.timer) { clearTimeout(reflexState.timer); reflexState.timer = null; }
+      if (typingState.timer) { clearInterval(typingState.timer); typingState.timer = null; }
+      if (tycoonState.timer) { clearInterval(tycoonState.timer); tycoonState.timer = null; }
+      if (triviaState.timer) { clearTimeout(triviaState.timer); triviaState.timer = null; }
+      memoryState.timers.forEach(t => clearTimeout(t));
+      memoryState.timers = [];
+    }
+
+
+
+
+    function openGame(gid) {
+      cleanupGameTimers();
+      const g = GAMES.find(x => x.id === gid);
+      if (!g) return;
+      currentApp = null;
+      document.getElementById('app-modal').classList.add('is-game');
+      setDialogHead('Mini game · ' + g.tag, g.title, '');
+      document.getElementById('m-output').setAttribute('aria-live', 'off');
+      openDialog(document.getElementById('app-modal'));
+
+      if (gid === 'g-reflex') initReflexUI();
+      else if (gid === 'g-typing') initTypingUI();
+      else if (gid === 'g-math') initMathUI();
+      else if (gid === 'g-market') initCandleUI();
+      else if (gid === 'g-word') initWordUI();
+      else if (gid === 'g-memory') initMemoryUI();
+      else if (gid === 'g-trivia') initTriviaUI();
+      else if (gid === 'g-tycoon') initTycoonUI();
+    }
+
+
+
+
+    // 1. REACTION SPEED MASTER
+    function initReflexUI() {
+      reflexState.status = 'idle';
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">How to Play</h4>
+        <p class="text-xs text-gray-300">1. Click <strong>Start Round</strong>.<br>2. Wait while the pad stays red (random 2–5 seconds).<br>3. The instant it turns <strong>GREEN</strong>, tap the pad!</p>
+        <button onclick="startReflexGame()" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm">Start Reaction Round</button>
+      `;
+      renderReflexOutput('Tap "Start Reaction Round" to begin.', 'bg-slate-800 border-white/15');
+    }
+
+
+
+
+    function renderReflexOutput(msg, boxClass) {
+      const bestTxt = reflexState.best ? `${reflexState.best} ms` : '\u2014';
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-4 text-center">
+          <button onpointerdown="tapReflexPad()" onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();tapReflexPad()}" class="block w-full select-none p-12 border-2 transition ${boxClass}" aria-label="Reaction pad">
+            <span class="block font-display text-3xl sm:text-4xl text-white">${msg}</span>
+          </button>
+          <div class="text-xs text-gray-400">Session Best Latency: <strong class="text-emerald-400">${bestTxt}</strong></div>
+        </div>
+      `;
+    }
+
+
+
+
+    function startReflexGame() {
+      if (reflexState.timer) clearTimeout(reflexState.timer);
+      reflexState.status = 'waiting';
+      renderReflexOutput('WAIT FOR GREEN... (Do not tap yet!)', 'bg-rose-700/80 border-rose-400');
+      const delay = 2000 + Math.floor(Math.random() * 3000);
+      reflexState.timer = setTimeout(() => {
+        reflexState.status = 'green';
+        reflexState.startAt = performance.now();
+        renderReflexOutput('TAP NOW!', 'bg-emerald-600 border-emerald-300');
+      }, delay);
+    }
+
+
+
+
+    function tapReflexPad() {
+      if (reflexState.status === 'idle') {
+        startReflexGame();
+      } else if (reflexState.status === 'waiting') {
+        clearTimeout(reflexState.timer);
+        reflexState.status = 'idle';
+        renderReflexOutput('Too early! You tapped before green. Click to retry.', 'bg-amber-600/80 border-amber-300');
+      } else if (reflexState.status === 'green') {
+        const ms = Math.max(1, Math.round(performance.now() - reflexState.startAt));
+        reflexState.status = 'idle';
+        if (!reflexState.best || ms < reflexState.best) reflexState.best = ms;
+        renderReflexOutput(`${ms} ms! (Tap pad or Start button for another round)`, 'bg-blue-600/80 border-blue-400');
+      }
+    }
+
+
+
+
+    // 2. TYPING SPEED & ACCURACY TEST (Replaces Chess in Arcade)
+    function initTypingUI() {
+      typingState.target = TYPING_PROMPTS[Math.floor(Math.random() * TYPING_PROMPTS.length)];
+      typingState.startAt = 0;
+      typingState.finished = false;
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">Typing Speed Test</h4>
+        <p class="text-xs text-gray-300">Timer starts automatically on your first keystroke. Type the target sentence shown on the right.</p>
+        <button onclick="initTypingUI()" class="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs">New Sentence / Reset</button>
+      `;
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-4">
+          <div class="p-3.5 bg-white/5 border border-white/10 text-xs sm:text-sm text-blue-200 select-none" id="typ-target">${esc(typingState.target)}</div>
+          <textarea id="typ-input" oninput="onTypingInput()" rows="3" placeholder="Start typing here..." class="w-full bg-black/60 border border-white/20 p-3 text-sm text-white focus:outline-none focus:border-amber-400"></textarea>
+          <div id="typ-stats" class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="p-2.5 bg-white/5"><span class="text-gray-400 block">Live WPM</span><strong id="typ-wpm" class="text-lg text-emerald-400">0</strong></div>
+            <div class="p-2.5 bg-white/5"><span class="text-gray-400 block">Accuracy</span><strong id="typ-acc" class="text-lg text-white">100%</strong></div>
+            <div class="p-2.5 bg-white/5"><span class="text-gray-400 block">Progress</span><strong id="typ-prog" class="text-lg text-amber-300">0%</strong></div>
+          </div>
+        </div>
+      `;
+    }
+
+
+
+
+    function onTypingInput() {
+      if (typingState.finished) return;
+      const inp = document.getElementById('typ-input').value;
+      if (!typingState.startAt && inp.length > 0) typingState.startAt = performance.now();
+      const elapsedMin = Math.max(0.01, (performance.now() - (typingState.startAt || performance.now())) / 60000);
+      let correctChars = 0;
+      for (let i = 0; i < inp.length; i++) {
+        if (inp[i] === typingState.target[i]) correctChars++;
+      }
+      const acc = inp.length ? Math.round((correctChars / inp.length) * 100) : 100;
+      const wpm = Math.round((correctChars / 5) / elapsedMin);
+      const prog = Math.min(100, Math.round((inp.length / typingState.target.length) * 100));
+
+
+
+
+      document.getElementById('typ-wpm').innerText = wpm;
+      document.getElementById('typ-acc').innerText = acc + '%';
+      document.getElementById('typ-prog').innerText = prog + '%';
+
+
+
+
+      if (inp.length >= typingState.target.length) {
+        typingState.finished = true;
+        document.getElementById('typ-input').disabled = true;
+        document.getElementById('typ-prog').innerText = 'Done! ';
+      }
+    }
+
+
+
+
+    // 3. MENTAL MATH BLITZ
+    function initMathUI() {
+      mathState.score = 0; mathState.streak = 0;
+      nextMathQuestion();
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">Mental Math Blitz</h4>
+        <p class="text-xs text-gray-300">Solve each arithmetic expression and press Submit. Every correct answer builds your streak!</p>
+        <button onclick="initMathUI()" class="w-full py-2.5 bg-white/10 hover:bg-white/15 text-xs font-semibold text-white">Reset Score</button>
+      `;
+      renderMathOutput('Enter your answer below to start your streak.');
+    }
+
+
+
+
+    function nextMathQuestion() {
+      const ops = ['+', '−', '×'];
+      const op = ops[Math.floor(Math.random() * ops.length)];
+      let a, b, ans;
+      if (op === '×') { a = 6 + Math.floor(Math.random() * 14); b = 4 + Math.floor(Math.random() * 12); ans = a * b; }
+      else if (op === '+') { a = 25 + Math.floor(Math.random() * 75); b = 15 + Math.floor(Math.random() * 65); ans = a + b; }
+      else { a = 50 + Math.floor(Math.random() * 60); b = 12 + Math.floor(Math.random() * 38); ans = a - b; }
+      mathState.a = a; mathState.b = b; mathState.op = op; mathState.ans = ans;
+    }
+
+
+
+
+    function renderMathOutput(feedback) {
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-4 text-center">
+          <div class="flex justify-between text-xs text-gray-400 pb-2">
+            <span>Score: <strong class="text-emerald-400">${mathState.score}</strong></span>
+            <span>Streak: <strong class="text-amber-300">${mathState.streak} </strong></span>
+          </div>
+          <div class="text-3xl font-display font-bold text-white py-2">${mathState.a} ${mathState.op} ${mathState.b} = ?</div>
+          <div class="flex gap-2 justify-center max-w-xs mx-auto">
+            <input id="math-in" type="number" onkeydown="if(event.key==='Enter')submitMathBlitz()" class="w-full bg-black/60 border border-white/20 p-2.5 text-center text-white text-sm" placeholder="Answer" />
+            <button onclick="submitMathBlitz()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs">Check answer</button>
+          </div>
+          <p class="text-xs text-blue-300">${feedback}</p>
+        </div>
+      `;
+      document.getElementById('math-in')?.focus();
+    }
+
+
+
+
+    function submitMathBlitz() {
+      const u = parseInt(document.getElementById('math-in').value, 10);
+      const prevAns = mathState.ans;
+      if (!Number.isFinite(u)) { renderMathOutput('Pehle answer likhein, phir Check answer dabayein.'); return; }
+      if (u === prevAns) {
+        mathState.score += 10; mathState.streak += 1;
+        nextMathQuestion();
+        renderMathOutput(`Correct (${prevAns})! +10 points.`);
+      } else {
+        mathState.streak = 0;
+        nextMathQuestion();
+        renderMathOutput(`Not quite · the answer was ${prevAns}. Try this next one!`);
+      }
+    }
+
+
+
+
+    // 4. NEXT CANDLE PREDICTOR (GENUINE 50/50 RANDOM SIMULATOR)
+    function initCandleUI() {
+      candleState = { balance: 10000, streak: 0, history: [] };
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">50/50 Random Candle Game</h4>
+        <p class="text-xs text-gray-300">Each virtual trade risks ₹500 on a pure 50/50 coin-flip candle outcome.</p>
+        <div class="grid grid-cols-2 gap-2 pt-2">
+          <button onclick="tradeCandle('GREEN')" class="py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs">Guess GREEN</button>
+          <button onclick="tradeCandle('RED')" class="py-3 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs">Guess RED</button>
+        </div>
+        <button onclick="initCandleUI()" class="w-full py-2 bg-white/10 text-xs text-gray-300 mt-2">Reset Virtual Balance</button>
+      `;
+      renderCandleOutput('Pick GREEN or RED to flip the next random candle.');
+    }
+
+
+
+
+    function tradeCandle(guess) {
+      if (candleState.balance < 500) { renderCandleOutput('Virtual balance khatam ho gaya. Reset karke dobara khelein.'); return; }
+      const actual = Math.random() < 0.5 ? 'GREEN' : 'RED';
+      const won = guess === actual;
+      candleState.balance += won ? 500 : -500;
+      candleState.streak = won ? candleState.streak + 1 : 0;
+      candleState.history.unshift({ guess, actual, won });
+      if (candleState.history.length > 6) candleState.history.pop();
+      renderCandleOutput(`${won ? 'You guessed right!' : 'Missed!'} Random candle closed ${actual} (${won ? '+₹500' : '-₹500'}).`);
+    }
+
+
+
+
+    function renderCandleOutput(msg) {
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between items-center p-3.5 bg-white/5">
+            <div><span class="text-xs text-gray-400 block">Virtual Balance</span><strong class="text-xl text-white">${inr(candleState.balance)}</strong></div>
+            <div><span class="text-xs text-gray-400 block">Win Streak</span><strong class="text-xl text-amber-300">${candleState.streak}</strong></div>
+          </div>
+          <p class="text-xs text-blue-200 font-semibold">${msg}</p>
+          <div class="flex gap-1.5 flex-wrap text-xs">
+            ${candleState.history.map(h => `<span class="px-2 py-1 ${h.actual==='GREEN'?'bg-emerald-500/20 text-emerald-300':'bg-rose-500/20 text-rose-300'}">${h.actual} (${h.won?'W':'L'})</span>`).join('')}
+          </div>
+          <p class="text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 p-2">
+            100% simulated random game - not a real market prediction.
+          </p>
+        </div>
+      `;
+    }
+
+
+
+
+    // 5. WORD SCRAMBLE (GENUINELY SCRAMBLED, USER INPUT, HINT & SKIP)
+    function scrambleWord(w) {
+      const arr = w.split('');
+      for (let attempt = 0; attempt < 10; attempt++) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        if (arr.join('') !== w) return arr.join(' · ');
+      }
+      return arr.reverse().join(' · ');
+    }
+
+
+
+
+    function initWordUI() {
+      wordState.idx = Math.floor(Math.random() * WORD_BANK.length);
+      wordState.score = 0;
+      wordState.showHint = false;
+      wordState.scrambled = scrambleWord(WORD_BANK[wordState.idx].w);
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">Tech & Finance Word Scramble</h4>
+        <p class="text-xs text-gray-300">Unscramble the shuffled letters and type your guess. Never reveals the word unless you skip.</p>
+        <div class="flex gap-2">
+          <button onclick="toggleWordHint()" class="flex-1 py-2.5 bg-white/10 hover:bg-white/15 text-xs font-semibold text-amber-300">Show Hint</button>
+          <button onclick="skipWord()" class="flex-1 py-2.5 bg-white/10 hover:bg-white/15 text-xs font-semibold text-gray-300">Skip Word</button>
+        </div>
+      `;
+      renderWordOutput('Type the unscrambled word below.');
+    }
+
+
+
+
+    function renderWordOutput(feedback) {
+      const item = WORD_BANK[wordState.idx];
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-4 text-center">
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Words Solved: <strong class="text-emerald-400">${wordState.score}</strong></span>
+            <span>Length: <strong>${item.w.length} letters</strong></span>
+          </div>
+          <div class="p-4 bg-blue-500/15 border border-blue-500/30 text-lg sm:text-xl font-bold text-amber-300">${wordState.scrambled}</div>
+          ${wordState.showHint ? `<p class="text-xs text-amber-200">Hint: ${item.h}</p>` : ''}
+          <div class="flex gap-2 max-w-sm mx-auto">
+            <input id="word-guess" type="text" onkeydown="if(event.key==='Enter')submitWordGuess()" placeholder="Type your guess..." class="w-full bg-black/60 border border-white/20 p-2.5 text-sm text-white uppercase text-center" />
+            <button onclick="submitWordGuess()" class="px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs">Check</button>
+          </div>
+          <p class="text-xs text-blue-300">${feedback}</p>
+        </div>
+      `;
+      document.getElementById('word-guess')?.focus();
+    }
+
+
+
+
+    function toggleWordHint() { wordState.showHint = true; renderWordOutput('Hint unlocked!'); }
+    function skipWord() {
+      const prev = WORD_BANK[wordState.idx].w;
+      wordState.idx = (wordState.idx + 1) % WORD_BANK.length;
+      wordState.showHint = false;
+      wordState.scrambled = scrambleWord(WORD_BANK[wordState.idx].w);
+      renderWordOutput(`Skipped! Previous word was ${prev}. Try this new one.`);
+    }
+    function submitWordGuess() {
+      const g = (document.getElementById('word-guess').value || '').trim().toUpperCase();
+      const target = WORD_BANK[wordState.idx].w;
+      if (g === target) {
+        wordState.score += 1;
+        wordState.idx = (wordState.idx + 1) % WORD_BANK.length;
+        wordState.showHint = false;
+        wordState.scrambled = scrambleWord(WORD_BANK[wordState.idx].w);
+        renderWordOutput(`Correct (${target})! Here is your next word.`);
+      } else {
+        renderWordOutput(`"${esc(g)}" is not right. Try again or click Show Hint!`);
+      }
+    }
+
+
+
+
+    // 6. PATTERN SEQUENCE MEMORY (SIMON GAME)
+    function initMemoryUI() {
+      memoryState = { seq:[], userIdx:0, round:0, best:memoryState.best || 0, locked:true, timers:[] };
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">Simon Pattern Memory</h4>
+        <p class="text-xs text-gray-300">Watch the colored pads flash in sequence, then tap them in the exact same order.</p>
+        <button onclick="startMemoryGame()" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm">Start New Sequence</button>
+      `;
+      renderMemoryBoard('Click "Start New Sequence" to play.');
+    }
+
+
+
+
+    function renderMemoryBoard(statusMsg) {
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-4 text-center">
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Current Round: <strong class="text-white">${memoryState.round}</strong></span>
+            <span>Best Round: <strong class="text-emerald-400">${memoryState.best}</strong></span>
+          </div>
+          <div class="grid grid-cols-2 gap-3 max-w-xs mx-auto">
+            <button id="sim-0" onclick="tapMemoryPad(0)" class="h-20 bg-rose-600/80 border border-rose-400 font-bold text-xs text-white transition">RED</button>
+            <button id="sim-1" onclick="tapMemoryPad(1)" class="h-20 bg-blue-600/80 border border-blue-400 font-bold text-xs text-white transition">BLUE</button>
+            <button id="sim-2" onclick="tapMemoryPad(2)" class="h-20 bg-emerald-600/80 border border-emerald-400 font-bold text-xs text-white transition">GREEN</button>
+            <button id="sim-3" onclick="tapMemoryPad(3)" class="h-20 bg-amber-500/80 border border-amber-300 font-bold text-xs text-black transition">GOLD</button>
+          </div>
+          <p id="sim-status" class="text-xs text-blue-300 font-semibold">${statusMsg}</p>
+        </div>
+      `;
+    }
+
+
+
+
+    function flashPad(idx) {
+      const el = document.getElementById('sim-' + idx);
+      if (!el) return;
+      el.classList.add('simon-lit');
+      const t = setTimeout(() => el.classList.remove('simon-lit'), 360);
+      memoryState.timers.push(t);
+    }
+
+
+
+
+    function startMemoryGame() {
+      memoryState.timers.forEach(t => clearTimeout(t));
+      memoryState.seq = [];
+      memoryState.round = 0;
+      nextMemoryRound();
+    }
+
+
+
+
+    function nextMemoryRound() {
+      memoryState.round += 1;
+      memoryState.userIdx = 0;
+      memoryState.locked = true;
+      memoryState.seq.push(Math.floor(Math.random() * 4));
+      renderMemoryBoard(`Watch sequence (${memoryState.round} steps)...`);
+      memoryState.seq.forEach((pad, i) => {
+        const t = setTimeout(() => flashPad(pad), 550 * (i + 1));
+        memoryState.timers.push(t);
+      });
+      const unlockT = setTimeout(() => {
+        memoryState.locked = false;
+        const st = document.getElementById('sim-status');
+        if (st) st.innerText = `Your turn! Tap ${memoryState.seq.length} pads in order.`;
+      }, 550 * memoryState.seq.length + 300);
+      memoryState.timers.push(unlockT);
+    }
+
+
+
+
+    function tapMemoryPad(padIdx) {
+      if (memoryState.locked) return;
+      flashPad(padIdx);
+      if (padIdx === memoryState.seq[memoryState.userIdx]) {
+        memoryState.userIdx += 1;
+        if (memoryState.userIdx === memoryState.seq.length) {
+          memoryState.locked = true;
+          if (memoryState.round > memoryState.best) memoryState.best = memoryState.round;
+          const st = document.getElementById('sim-status');
+          if (st) st.innerText = `Round ${memoryState.round} cleared! Next round starting...`;
+          const nt = setTimeout(() => nextMemoryRound(), 900);
+          memoryState.timers.push(nt);
+        }
+      } else {
+        memoryState.locked = true;
+        renderMemoryBoard(`Wrong pad! Game over at Round ${memoryState.round}. Click "Start New Sequence" to play again.`);
+      }
+    }
+
+
+
+
+    // 7. 10-QUESTION TRIVIA QUIZ
+    function initTriviaUI() {
+      if (triviaState.timer) clearTimeout(triviaState.timer);
+      triviaState = { idx: 0, score: 0, answered: false, choice: -1 };
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">10-Question Trivia</h4>
+        <p class="text-xs text-gray-300">Test your knowledge across Indian finance, computing, and science.</p>
+        <button onclick="initTriviaUI()" class="w-full py-2.5 bg-white/10 hover:bg-white/15 text-xs font-semibold text-white">Restart 10-Question Quiz</button>
+      `;
+      renderTriviaQuestion();
+    }
+
+
+
+
+    function renderTriviaQuestion() {
+      if (triviaState.idx >= TRIVIA_BANK.length) {
+        document.getElementById('m-output').innerHTML = `
+          <div class="text-center space-y-4 py-6">
+            <h4 class="text-2xl font-display font-bold text-white">Quiz Complete!</h4>
+            <p class="text-lg text-emerald-400 font-bold">Final Score: ${triviaState.score} / ${TRIVIA_BANK.length}</p>
+            <button onclick="initTriviaUI()" class="px-6 py-2.5 bg-blue-600 text-white font-bold text-xs">Play Again</button>
+          </div>`;
+        return;
+      }
+      const item = TRIVIA_BANK[triviaState.idx];
+      document.getElementById('m-output').innerHTML = `
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between text-xs text-gray-400">
+            <span>Question ${triviaState.idx + 1} of ${TRIVIA_BANK.length}</span>
+            <span class="px-2 py-0.5 bg-white/10 text-white font-semibold">Score: ${triviaState.score}</span>
+          </div>
+          <h4 class="text-base font-bold text-white leading-snug">${item.q}</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+            ${item.o.map((opt, i) => `
+              <button onclick="answerTrivia(${i})" class="p-3 bg-white/5 hover:bg-blue-600/30 border border-white/10 hover:border-blue-400 text-left text-xs text-gray-200 transition">
+                <strong class="text-blue-400 mr-1.5">${String.fromCharCode(65 + i)}.</strong>${opt}
+              </button>`).join('')}
+          </div>
+          <div id="trivia-feedback" class="min-h-[1.25rem] text-xs"></div>
+        </div>`;
+    }
+
+
+
+
+    function answerTrivia(choiceIdx) {
+      if (triviaState.answered) return;
+      const item = TRIVIA_BANK[triviaState.idx];
+      if (!item) return;
+      triviaState.answered = true;
+      triviaState.choice = choiceIdx;
+      const fb = document.getElementById('trivia-feedback');
+      if (choiceIdx === item.a) {
+        triviaState.score += 1;
+        if (fb) fb.innerHTML = `<span class="text-emerald-400 font-bold">Correct!</span>`;
+      } else {
+        if (fb) fb.innerHTML = `<span class="text-rose-400 font-bold">Wrong! Correct answer: ${item.o[item.a]}</span>`;
+      }
+      triviaState.timer = setTimeout(() => {
+        triviaState.idx += 1;
+        triviaState.answered = false;
+        triviaState.timer = null;
+        renderTriviaQuestion();
+      }, 900);
+    }
+
+
+
+
+    // 8. AI STUDIO CLICKER TYCOON
+    let tycoonUp = { script:0, gpu:0, agent:0, boost:0 };
+    const TYCOON_UPGRADES = [
+      { key:'boost', name:'Prompt Pack', desc:'+1 point per click', base:60, click:1, auto:0 },
+      { key:'script', name:'Auto Script', desc:'+1 point / second', base:50, click:0, auto:1 },
+      { key:'gpu', name:'GPU Node', desc:'+6 points / second', base:260, click:0, auto:6 },
+      { key:'agent', name:'AI Agent', desc:'+30 points / second', base:1200, click:0, auto:30 }
+    ];
+
+
+    function tycoonCost(u) {
+      return Math.round(u.base * Math.pow(1.6, tycoonUp[u.key]));
+    }
+
+
+    function initTycoonUI() {
+      document.getElementById('m-inputs').innerHTML = `
+        <h4 class="font-medium text-base text-blue-300">How to Play</h4>
+        <p class="text-xs text-gray-300">Click the ship button to earn points, then spend them on upgrades for passive income. Progress stays while this page is open.</p>
+        <button onclick="clickTycoon()" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition">Ship Micro-Tool (+<span id="tc-perclick">${tycoonState.perClick}</span>)</button>
+        <div id="tc-shop" class="space-y-2 pt-1"></div>
+        <button onclick="resetTycoon()" class="w-full py-2 bg-white/10 hover:bg-white/15 text-xs font-semibold text-white">Reset Tycoon</button>
+      `;
+      if (tycoonState.timer) { clearInterval(tycoonState.timer); }
+      tycoonState.timer = setInterval(() => {
+        if (tycoonState.autoRate > 0) {
+          tycoonState.pts += tycoonState.autoRate;
+          updateTycoonCounters();
+        }
+      }, 1000);
+      renderTycoonUI();
+    }
+
+
+    function renderTycoonUI() {
+      const shop = document.getElementById('tc-shop');
+      if (shop) {
+        shop.innerHTML = TYCOON_UPGRADES.map(u => `
+          <button onclick="buyTycoonUpgrade('${u.key}')" class="w-full flex items-center justify-between p-2.5 bg-white/5 hover:bg-blue-600/25 border border-white/10 hover:border-blue-400 text-left transition">
+            <span class="text-xs text-gray-200"><strong class="text-white">${u.name}</strong> (owned: ${tycoonUp[u.key]})<br><span class="text-gray-400">${u.desc}</span></span>
+            <span class="text-xs font-bold text-amber-300 whitespace-nowrap pl-2">${tycoonCost(u)} pts</span>
+          </button>`).join('');
+      }
+      updateTycoonCounters();
+    }
+
+
+    function updateTycoonCounters() {
+      document.getElementById('m-output').innerHTML = `
+        <div class="grid grid-cols-3 gap-2 text-center">
+          <div class="p-3 bg-slate-800 border border-white/10 min-w-0"><p class="text-base sm:text-lg font-bold text-amber-300 break-all">${Math.floor(tycoonState.pts).toLocaleString('en-IN')}</p><p class="text-xs text-gray-400">Points</p></div>
+          <div class="p-3 bg-slate-800 border border-white/10 min-w-0"><p class="text-base sm:text-lg font-bold text-blue-300 break-all">${tycoonState.perClick.toLocaleString('en-IN')}</p><p class="text-xs text-gray-400">Per Click</p></div>
+          <div class="p-3 bg-slate-800 border border-white/10 min-w-0"><p class="text-base sm:text-lg font-bold text-emerald-300 break-all">${tycoonState.autoRate.toLocaleString('en-IN')}/s</p><p class="text-xs text-gray-400">Passive</p></div>
+        </div>`;
+      const pc = document.getElementById('tc-perclick');
+      if (pc) pc.innerText = tycoonState.perClick;
+    }
+
+
+    function clickTycoon() {
+      tycoonState.pts += tycoonState.perClick;
+      updateTycoonCounters();
+    }
+
+
+    function buyTycoonUpgrade(key) {
+      const u = TYCOON_UPGRADES.find(x => x.key === key);
+      if (!u) return;
+      const cost = tycoonCost(u);
+      if (tycoonState.pts < cost) return;
+      tycoonState.pts -= cost;
+      tycoonUp[key] += 1;
+      tycoonState.perClick += u.click;
+      tycoonState.autoRate += u.auto;
+      renderTycoonUI();
+    }
+
+
+    function resetTycoon() {
+      tycoonState.pts = 0;
+      tycoonState.perClick = 1;
+      tycoonState.autoRate = 0;
+      tycoonUp = { script:0, gpu:0, agent:0, boost:0 };
+      renderTycoonUI();
+    }
+
+
+
+
+
+  </script>
+</body>
+</html>
